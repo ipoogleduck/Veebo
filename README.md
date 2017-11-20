@@ -1,4 +1,4 @@
-# Veebo
+# Veebo version 0.2.1
 Veebo is a personal assistant that can answer questions and help you with your homework
 # NOTICE: 
 This program is in beta stage and may not be able to complete every function yet.
