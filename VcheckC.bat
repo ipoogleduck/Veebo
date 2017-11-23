@@ -1,1 +1,0 @@
-bitsadmin.exe /transfer "latestversion.txt" https://ipooglecodes.weebly.com/uploads/9/7/6/2/97620300/latestversion.txt C:\Desktop\Veebo\here.txt
