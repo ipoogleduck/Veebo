@@ -24,22 +24,19 @@ compOutputLine2 = "";
 compOutputLine3 = "";
 letter = 0;
 version = "";
-ifstream writer3("here.txt");
-while (version == "") {
-	ifstream reader3("here.txt");
-	if (!reader3) {
-		cout << "Error";
+cout << "Click enter" << endl;
+cin.ignore();
+ifstream reader3("here.txt");
+if (!reader3) {
+	cout << "Error";
+}
+else {
 
-
+	for (int i = 0; !reader3.eof(); i++) {
+		reader3.get(letter);
+		version += letter;
 	}
-	else {
-
-		for (int i = 0; !reader3.eof(); i++) {
-			reader3.get(letter);
-			version += letter;
-		}
-		reader3.close();
-	}
+	reader3.close();
 }
 version.pop_back();
 if (version == cversion) {
