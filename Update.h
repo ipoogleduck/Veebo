@@ -29,6 +29,7 @@ cin.ignore();
 ifstream reader3("here.txt");
 if (!reader3) {
 	cout << "Error";
+	tempString = "0";
 }
 else {
 
@@ -41,6 +42,7 @@ else {
 version.pop_back();
 if (version == cversion) {
 	cout << "You are up to date!" << endl;
+	tempString = "1";
 }
 else {
 	cout << "Update available for version number " << version << ". Do you want to update?" << endl;
@@ -50,10 +52,11 @@ else {
 		CString str = "C:/Veebo/install.bat";
 		CString action = "open";
 		ShellExecute(NULL, action, str, NULL, NULL, SW_SHOW);
-		return;
+		tempString = "0";
 	}
 	else {
 		cout << "Okay" << endl;
+		tempString = "1";
 	}
 }
 }
