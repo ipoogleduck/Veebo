@@ -40,14 +40,10 @@ while (tempString == "_") {
 		cout << "Error";
 	}
 	else {
-
-		for (int i = 0; !reader21.eof(); i++) {
 			reader21.get(letter);
 			tempString += letter;
-		}
 		reader21.close();
 	}
-	tempString.pop_back();
 }
 
 ifstream reader3("here.txt");
