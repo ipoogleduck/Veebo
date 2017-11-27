@@ -16,13 +16,12 @@ using namespace std;
 
 void update(){
 compOutput = "I'll check if a new version is available...";
-cout << compOutput << endl;
+cout << compOutput << endl << endl;
 CString str = "C:/Veebo/Vcheck.bat";
 CString action = "open";
 ShellExecute(NULL, action, str, NULL, NULL, SW_SHOW);
 compOutputLine2 = "";
 compOutputLine3 = "";
-letter = 0;
 version = "";
 ofstream writer21("done.txt");
 if (!writer21) {
@@ -32,20 +31,21 @@ else {
 	writer21 << "_" << endl;
 	writer21.close();
 }
-
-while (tempString == "_") {
+letter = '_';
+letter2 = 0;
+while (letter == '_' || letter == ' ' || letter2 > 40000) {
 	tempString = "";
 	ifstream reader21("done.txt");
 	if (!reader21) {
-		cout << "Error";
 	}
 	else {
-			reader21.get(letter);
-			tempString += letter;
+		reader21.get(letter);
+		tempString += letter;
 		reader21.close();
+		letter2++;
 	}
 }
-
+letter2 = 0;
 ifstream reader3("here.txt");
 if (!reader3) {
 	cout << "Error";
