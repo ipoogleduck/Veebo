@@ -32,8 +32,7 @@ else {
 	writer21.close();
 }
 letter = '_';
-letter2 = 0;
-while (letter == '_' || letter == ' ' || letter2 > 40000) {
+while (letter == '_' || letter == ' ') {
 	tempString = "";
 	ifstream reader21("done.txt");
 	if (!reader21) {
