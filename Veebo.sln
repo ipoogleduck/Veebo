@@ -17,14 +17,14 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{0864E5FD-6F5F-4848-B93F-0DFB72A2B8F0}.Debug|x64.ActiveCfg = Debug|x64
 		{0864E5FD-6F5F-4848-B93F-0DFB72A2B8F0}.Debug|x64.Build.0 = Debug|x64
-		{0864E5FD-6F5F-4848-B93F-0DFB72A2B8F0}.Debug|x86.ActiveCfg = Release|Win32
-		{0864E5FD-6F5F-4848-B93F-0DFB72A2B8F0}.Debug|x86.Build.0 = Release|Win32
+		{0864E5FD-6F5F-4848-B93F-0DFB72A2B8F0}.Debug|x86.ActiveCfg = Debug|Win32
+		{0864E5FD-6F5F-4848-B93F-0DFB72A2B8F0}.Debug|x86.Build.0 = Debug|Win32
 		{0864E5FD-6F5F-4848-B93F-0DFB72A2B8F0}.Release|x64.ActiveCfg = Release|x64
 		{0864E5FD-6F5F-4848-B93F-0DFB72A2B8F0}.Release|x64.Build.0 = Release|x64
 		{0864E5FD-6F5F-4848-B93F-0DFB72A2B8F0}.Release|x86.ActiveCfg = Release|Win32
 		{0864E5FD-6F5F-4848-B93F-0DFB72A2B8F0}.Release|x86.Build.0 = Release|Win32
 		{56AED2EA-6CAB-420F-9AB8-04465A9F7946}.Debug|x64.ActiveCfg = Debug
-		{56AED2EA-6CAB-420F-9AB8-04465A9F7946}.Debug|x86.ActiveCfg = Release
+		{56AED2EA-6CAB-420F-9AB8-04465A9F7946}.Debug|x86.ActiveCfg = Debug
 		{56AED2EA-6CAB-420F-9AB8-04465A9F7946}.Release|x64.ActiveCfg = Release
 		{56AED2EA-6CAB-420F-9AB8-04465A9F7946}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
