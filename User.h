@@ -25,7 +25,7 @@ string gogo;
 string ruffruff;
 
 void t2() {
-	cout << "Transfering files..." << endl;
+	cout << "I'm going to create two keys to keep your account more secure..." << endl << "This may take up to three minutes..." << endl;
 	key = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ .?!,0123456789";
 	while (keyChar != 67) { //while its not on *
 		srand(time(0)); // This will ensure a really randomized number by help of time.
@@ -48,7 +48,7 @@ void t2() {
 	uncyrptable = "ravLNcED!Yhe5ZQq2Sb?U lBRGCdgA7mn8413tpjuKFMJHzxoPX,W6wfOVI.Ty0iks9*_";
 	keyChar = 0; //for kepping track of char in code
 	cryptChar = 0;
-	cout << "\nCreating Key..." << endl;
+	cout << "\nCreating 2nd Key..." << endl;
 	key = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ .?!,0123456789";
 	while (keyChar != 67) { //while its not on *
 		srand(time(0)); // This will ensure a really randomized number by help of time.
@@ -66,11 +66,12 @@ void t2() {
 	ofstream writer28("btwo.txt");
 	writer28 << key << endl;
 	writer28.close();
+	system("CLS");
 }
 void createUser() { //Sets up info
 	ofstream writer2(currentY);
 	if (!writer2) {
-		cout << "Error opening file" << endl;
+		cout << "Error 2343 opening file" << endl;
 	}
 	else {
 		writer2 << "Y" << endl;
@@ -80,7 +81,7 @@ void createUser() { //Sets up info
 	getline(cin, name);
 	ofstream writer(currentN);
 	if (!writer) {
-		cout << "Error opening file..." << endl;
+		cout << "Error 6543 opening file..." << endl;
 	}
 	else {
 		writer << name << endl;
@@ -93,7 +94,7 @@ void createUser() { //Sets up info
 			IDE = "W";
 			ofstream writer30(currentT);
 			if (!writer30) {
-				cout << "Error opening file..." << endl;
+				cout << "Error 7294 opening file..." << endl;
 			}
 			else {
 				writer30 << IDE << endl;
