@@ -385,6 +385,7 @@ void switchUser() {
 	if (gogo != "hhy") {
 		void logout();
 	}
+	system("color F0");
 	cout << "Log in with your password or type 'GUEST'" << endl;
 	getline(cin, passtype);
 	system("CLS");
@@ -684,6 +685,9 @@ void switchUser() {
 
 		if (IDE == "W") {
 			system("color F0");
+		}
+		else {
+			system("color 0F");
 		}
 	}
 }
