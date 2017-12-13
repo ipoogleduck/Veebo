@@ -880,6 +880,21 @@ void removeUser() {
 			user449943 << "";
 			user449943.close();
 			didalready = "mnm";
+			ifstream readeriii(yorn1);
+			ifstream readeriiii(yorn2);
+			ifstream readeriiiii(yorn3);
+			ifstream readeriiiiii(yorn4);
+			if (!readeriii && !readeriiii && !readeriiiii && !readeriiiiii) {
+				currentY = yorn1;
+				currentN = name1;
+				currentB = betasurvey1;
+				currentT = theme1;
+				nastpass = nastpass1;
+				logdid = logdid1;
+				account = "1";
+				createUser();
+				t2();
+			}
 			cout << "You will need to log in again. Click enter..." << endl;
 			cin.ignore();
 			logout();
