@@ -13,19 +13,9 @@
 #include <fstream>
 #include <atlstr.h>
 using namespace std;
-string key;
-string decOrEnc;
-string cryptMessage;
-string cryptable = "qQwWeErRtTyYuUiIoOpPaAsSdDfFgGhHjJkKlLzZxXcCvVbBnNmM1234567890#:><(){}[]-?!@^&=+";
-string uncyrptable = "ravLNcED!Yhe5ZQq2Sb?U lBRGCdgA7mn8413tpjuKFMJHzxoPX,W6wfOVI.Ty0iks9*_";
-int keyChar = 0; //for kepping track of char in code
-int cryptChar = 0; //for keeping track of how many chars have been crypted
-				   //All func
-string gogo;
-string ruffruff;
 
 void t2() {
-	cout << "I'm going to create two keys to keep your account more secure..." << endl << "This may take up to three minutes..." << endl;
+	cout << "\nI'm going to create two keys to keep your account more secure..." << endl << "This may take up to three minutes..." << endl;
 	key = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ .?!,0123456789";
 	while (keyChar != 67) { //while its not on *
 		srand(time(0)); // This will ensure a really randomized number by help of time.
@@ -77,7 +67,7 @@ void createUser() { //Sets up info
 		writer2 << "Y" << endl;
 		writer2.close();
 	}
-	cout << "Whats your name?" << endl; //gets name
+	cout << "What's your name?" << endl; //gets name
 	getline(cin, name);
 	ofstream writer(currentN);
 	if (!writer) {
@@ -90,7 +80,7 @@ void createUser() { //Sets up info
 		getline(cin, IDE);
 		if (IDE == "White" || IDE == "white" || IDE == "W" || IDE == "w") {
 			system("color F0");
-			cout << "Okay, you can cange this later by typing 'change theme'" << endl;
+			cout << "Okay, you can change this later by typing 'change theme'" << endl;
 			IDE = "W";
 			ofstream writer30(currentT);
 			if (!writer30) {
@@ -157,7 +147,7 @@ void createUser() { //Sets up info
 	}
 	else {
 		system("CLS");
-		cout << "When you log back in after switching users or loging out use your name as your password" << endl;
+		cout << "When you log back in after loging out use your name as your password" << endl;
 		cout << "You can change this at a later time by typing 'add password'" << endl;
 		writerPass << name;
 		writerlog << "";
@@ -168,6 +158,123 @@ void createUser() { //Sets up info
 	cout << "Your account has been created, when you want to log out, type 'logout'" << endl;
 	compOutputLine2 = "";
 	compOutputLine3 = "";
+	ofstream writetgg("lastpass.txt"); //I gave up on good names for writer and reader
+	diditlog = "";
+	if (account == "1") {
+		ifstream use1222reader(logdid1);
+		if (!use1222reader) {
+
+		}
+		else {
+			for (int i = 0; !use1222reader.eof(); i++) {
+				use1222reader.get(letter);
+				diditlog += letter;
+			}
+			use1222reader.close();
+			diditlog.pop_back();
+		}
+		ifstream nnmmnmm(nastpass1);
+		if (!nnmmnmm) {
+
+		}
+		else {
+			passcheckfile = "";
+			for (int i = 0; !nnmmnmm.eof(); i++) {
+				nnmmnmm.get(letter);
+				passcheckfile += letter;
+			}
+			nnmmnmm.close();
+			passcheckfile.pop_back();
+		}
+		writetgg << passcheckfile;
+	}
+
+	else if (account == "2") {
+		ifstream use1222reader(logdid2);
+		if (!use1222reader) {
+
+		}
+		else {
+			for (int i = 0; !use1222reader.eof(); i++) {
+				use1222reader.get(letter);
+				diditlog += letter;
+			}
+			use1222reader.close();
+			diditlog.pop_back();
+		}
+		ifstream nnmmnmm(nastpass2);
+		if (!nnmmnmm) {
+
+		}
+		else {
+			passcheckfile = "";
+			for (int i = 0; !nnmmnmm.eof(); i++) {
+				nnmmnmm.get(letter);
+				passcheckfile += letter;
+			}
+			nnmmnmm.close();
+			passcheckfile.pop_back();
+		}
+		writetgg << passcheckfile;
+	}
+
+	else if (account == "3") {
+		ifstream use1222reader(logdid3);
+		if (!use1222reader) {
+
+		}
+		else {
+			for (int i = 0; !use1222reader.eof(); i++) {
+				use1222reader.get(letter);
+				diditlog += letter;
+			}
+			use1222reader.close();
+			diditlog.pop_back();
+		}
+		ifstream nnmmnmm(nastpass3);
+		if (!nnmmnmm) {
+
+		}
+		else {
+			passcheckfile = "";
+			for (int i = 0; !nnmmnmm.eof(); i++) {
+				nnmmnmm.get(letter);
+				passcheckfile += letter;
+			}
+			nnmmnmm.close();
+			passcheckfile.pop_back();
+		}
+		writetgg << passcheckfile;
+	}
+	else if (account == "4") {
+		ifstream use1222reader(logdid4);
+		if (!use1222reader) {
+
+		}
+		else {
+			for (int i = 0; !use1222reader.eof(); i++) {
+				use1222reader.get(letter);
+				diditlog += letter;
+			}
+			use1222reader.close();
+			diditlog.pop_back();
+		}
+		ifstream nnmmnmm(nastpass4);
+		if (!nnmmnmm) {
+
+		}
+		else {
+			passcheckfile = "";
+			for (int i = 0; !nnmmnmm.eof(); i++) {
+				nnmmnmm.get(letter);
+				passcheckfile += letter;
+			}
+			nnmmnmm.close();
+			passcheckfile.pop_back();
+		}
+		writetgg << passcheckfile;
+	}
+	writetgg.close();
 }
 void transferFiles() {
 	//theme stored in IDE
@@ -387,7 +494,7 @@ void switchUser() {
 		void logout();
 	}
 	system("color F0");
-	cout << "Log in with your password or type 'GUEST'" << endl;
+	cout << "Log in with your password or type 'GUEST' If you don't have a password use your account name..." << endl;
 	getline(cin, passtype);
 	system("CLS");
 	if (passtype == "GUEST" || passtype == "Guest" || passtype == "guest") {
@@ -668,9 +775,9 @@ void switchUser() {
 			cout << "You can also type 'help' for a list of cool features currently available" << endl;
 		}
 		else {
-			cout << "Hello! Welcome to Veebo!" << endl;
-			cout << "It looks like you haven't set up your info yet... Please type 'My info' to set it up" << endl;
-			cout << "After you're done, you can type 'help' for a list of cool features currently available" << endl;
+			cout << "Hi Guest, welcome to Veebo!" << endl;
+			cout << "As a guest, some features may not be availiable" << endl;
+			account = "GUEST";
 		}
 		reader2.close();
 
@@ -683,8 +790,10 @@ void switchUser() {
 		reader31.get(letter);
 		IDE += letter;
 		reader31.close();
-
 		if (IDE == "W") {
+			system("color F0");
+		}
+		else if (account == "GUEST") {
 			system("color F0");
 		}
 		else {
@@ -876,6 +985,16 @@ void removeUser() {
 			user49343 << "";
 			user49343.close();
 			//Add archive for betasurvey
+			ifstream betachiveread(currentB);
+			tempString = "";
+			for (int i = 0; !betachiveread.eof(); i++) {
+				betachiveread.get(letter);
+				tempString += letter;
+			}
+			ofstream betachivewrite("surveyarchive.txt");
+			betachiveread.close();
+			betachivewrite << name << endl << tempString << endl << endl << endl;
+			betachivewrite.close();
 			ofstream user449943(currentB);
 			user449943 << "";
 			user449943.close();

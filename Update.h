@@ -43,8 +43,27 @@ while (letter == '_' || letter == ' ') {
 		reader21.close();
 		letter2++;
 	}
+	cryptable = "qyfhuec";
+	uncyrptable = "ray*_";
+	keyChar = 0; //for kepping track of char in code
+	cryptChar = 0;
+	key = "aAbrurb";
+	while (keyChar != 2) { //while its not on *
+		srand(time(0)); // This will ensure a really randomized number by help of time.
+		cryptChar = rand() % 2 + 1; //rand char
+		if (cryptable[cryptChar] == '_') { //will read _ if char is already used
+
+		}
+		else if (cryptable[cryptChar] != '_') {
+			key[keyChar] = cryptable[cryptChar]; //transfer encrypted char
+			cryptable[cryptChar] = '_'; //will put _ if char is already used
+			keyChar++; //goes to next char for key
+			cout << "."; //to show progress
+		}
+	}
 }
 letter2 = 0;
+cout << endl;
 ifstream reader3("here.txt");
 if (!reader3) {
 	cout << "Error";
