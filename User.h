@@ -499,6 +499,13 @@ void switchUser() {
 	system("CLS");
 	if (passtype == "GUEST" || passtype == "Guest" || passtype == "guest") {
 		account = "GUEST";
+		currentY = "";
+		currentN = "";
+		currentB = "";
+		currentT = "";
+		nastpass = "";
+		logdid = "";
+		name = "";
 		cout << "You are logged in as a guest. No data will be saved. Type 'log out' to log out" << endl;
 	}
 	else {
@@ -775,6 +782,7 @@ void switchUser() {
 			cout << "You can also type 'help' for a list of cool features currently available" << endl;
 		}
 		else {
+			system("color F0");
 			cout << "Hi Guest, welcome to Veebo!" << endl;
 			cout << "As a guest, some features may not be availiable" << endl;
 			account = "GUEST";
@@ -991,10 +999,9 @@ void removeUser() {
 				betachiveread.get(letter);
 				tempString += letter;
 			}
-			ofstream betachivewrite("surveyarchive.txt");
-			betachiveread.close();
-			betachivewrite << name << endl << tempString << endl << endl << endl;
-			betachivewrite.close();
+			ofstream betarchivewrite("surveyarchive.txt", ios::app);
+			betarchivewrite << name << endl << tempString << endl << endl << endl;
+			betarchivewrite.close();
 			ofstream user449943(currentB);
 			user449943 << "";
 			user449943.close();
