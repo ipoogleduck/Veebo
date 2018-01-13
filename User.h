@@ -16,6 +16,9 @@ using namespace std;
 
 void t2() {
 	cout << "\nI'm going to create two keys to keep your account more secure..." << endl << "This may take up to three minutes..." << endl;
+	CString str = "C:/Veebo/Keycreate.vbs";
+	CString action = "open";
+	ShellExecute(NULL, action, str, NULL, NULL, SW_SHOW);
 	key = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ .?!,0123456789";
 	while (keyChar != 67) { //while its not on *
 		srand(time(0)); // This will ensure a really randomized number by help of time.
@@ -39,6 +42,9 @@ void t2() {
 	keyChar = 0; //for kepping track of char in code
 	cryptChar = 0;
 	cout << "\nCreating 2nd Key..." << endl;
+	str = "C:/Veebo/Keycreate2.vbs";
+	action = "open";
+	ShellExecute(NULL, action, str, NULL, NULL, SW_SHOW);
 	key = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ .?!,0123456789";
 	while (keyChar != 67) { //while its not on *
 		srand(time(0)); // This will ensure a really randomized number by help of time.
@@ -276,112 +282,7 @@ void createUser() { //Sets up info
 	}
 	writetgg.close();
 }
-void transferFiles() {
-	//theme stored in IDE
-	//yorn stored in yorn
-	//name stored in current type
-	//betasurvey stored in lasttype
-	ifstream reade15("theme.txt");
-	if (!reade15) {
 
-	}
-	else {
-		IDE = "";
-		reade15.get(letter);
-		IDE += letter;
-		reade15.close();
-	}
-	ifstream reade1("yorn.txt");
-	if (!reade1) {
-
-	}
-	else {
-		yorn = "";
-		reade1.get(letter);
-		yorn += letter;
-		reade1.close();
-	}
-	ifstream rea("name.txt");
-	if (!rea) {
-
-	}
-	else {
-		currentType = "";
-		for (int i = 0; !rea.eof(); i++) {
-			rea.get(letter);
-			currentType += letter;
-		}
-		rea.close();
-	}
-	ifstream reade1j("betasurvey.txt");
-	if (!reade1j) {
-
-	}
-	else {
-		lastType = "";
-		for (int i = 0; !reade1j.eof(); i++) {
-			reade1j.get(letter);
-			lastType += letter;
-		}
-		reade1j.close();
-	}
-	currentType.pop_back();
-	lastType.pop_back();
-	ofstream writer67(yorn1);
-	if (!writer67) {
-
-	}
-	else {
-		writer67 << yorn;
-		writer67.close();
-	}
-	ofstream writer6799("yorn.txt");
-	if (!writer6799) {
-
-	}
-	else {
-		writer6799 << "M";
-		writer6799.close();
-	}
-
-	ofstream writer09(theme1);
-	if (!writer09) {
-
-	}
-	else {
-		writer09 << IDE;
-		writer09.close();
-	}
-
-	ofstream writer678(name1);
-	if (!writer678) {
-
-	}
-	else {
-		writer678 << currentType;
-		writer678.close();
-	}
-
-	ofstream writer674(betasurvey1);
-	if (!writer674) {
-
-	}
-	else {
-		writer674 << lastType;
-		writer674.close();
-	}
-	t2();
-	cout << "\nYou will now have to reconfigure your account" << endl;
-	cin.ignore();
-	currentY = yorn1;
-	currentN = name1;
-	currentB = betasurvey1;
-	currentT = theme1;
-	nastpass = nastpass1;
-	logdid = logdid1;
-	account = "1";
-	createUser();
-}
 void addUser() { //Checks users
 	letter = 'h';
 	ifstream user1reader(yorn1);
@@ -488,7 +389,46 @@ void addUser() { //Checks users
 	}
 	
 }
+void transferFiles() {
+	ifstream reade1j("betasurvey.txt");
+	if (!reade1j) {
 
+	}
+	else {
+		lastType = "";
+		for (int i = 0; !reade1j.eof(); i++) {
+			reade1j.get(letter);
+			lastType += letter;
+		}
+		reade1j.close();
+	}
+	currentType.pop_back();
+	lastType.pop_back();
+	ofstream writer6799("yorn.txt");
+	if (!writer6799) {
+
+	}
+	else {
+		writer6799 << "M";
+		writer6799.close();
+	}
+	ofstream writer674(betasurvey1);
+	if (!writer674) {
+
+	}
+	else {
+		writer674 << lastType;
+		writer674.close();
+	}
+	currentY = yorn1;
+	currentN = name1;
+	currentB = betasurvey1;
+	currentT = theme1;
+	nastpass = nastpass1;
+	logdid = logdid1;
+	account = "1";
+	//addUser();
+}
 void switchUser() {
 	if (gogo != "hhy") {
 		void logout();
@@ -825,8 +765,12 @@ void logout() {
 }
 void removeUser() {
 	cout << "Type the password/name of the account you would like to remove" << endl;
+	cout << "If you forgot your password, type 'forgot password'" << endl;
 	getline(cin, passtype);
 	passcheckfile = "";
+	if (passtype == "forgot password" || passtype == "Forgot password" || passtype == "Forgot Password") {
+		ShellExecute(0, 0, L"https://ipooglecodes.weebly.com/userfiledelete.html", 0, 0, SW_SHOW);
+	}
 	ifstream ser1reader(nastpass1);
 	if (!ser1reader) {
 	}

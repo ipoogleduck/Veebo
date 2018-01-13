@@ -13,7 +13,91 @@
 #include <fstream>
 #include <atlstr.h>
 using namespace std;
+int updateabort;
 
+char quote = '"';
+void startup() {
+	cout << "Welcome to" << endl;
+	cout << ":+:     :+: :+::+::+:: :+::+::+:: :+:+:+:+:   :+:+:+:+  " << endl;
+	cout << ":+:     :+: :+:        :+:        :+:    :+: :+:    :+: " << endl;
+	cout << "+:+     +:+ +:+        +:+        +:+    +:+ +:+    +:+ " << endl;
+	cout << "+#+     +:+ +#++:++#   +#++:++#   +#++:++#+  +#+    +:+ " << endl;
+	cout << " +#+   +#+  +#+        +#+        +#+    +#+ +#+    +#+ " << endl;
+	cout << "  #+#+#+#   #+#        #+#        #+#    #+# #+#    #+# " << endl;
+	cout << "    ###     ########## ########## #########   ########  " << endl;
+	Sleep(500);
+	system("CLS");
+	cout << "Welcome to" << endl;
+	cout << ":::     ::: :::::::::: :::::::::: :::::::::   ::::::::  " << endl;
+	cout << "+:+     +:+ +:+        +:+        +:+    +:+ +:+    +:+ " << endl;
+	cout << ":+:     :+: :+:        :+:        :+:    :+: :+:    :+: " << endl;
+	cout << "#+#     :+: +#++:++#   +#++:++#   +#++:++#+  +#+    :+: " << endl;
+	cout << " #+#   #+#  #+#        #+#        #+#    #+# #+#    #+# " << endl;
+	cout << "  +#+#+#+   +#+        +#+        +#+    +#+ +#+    +#+ " << endl;
+	cout << "    ###     ########## ########## #########   ########  " << endl;
+	Sleep(200);
+	system("CLS");
+	cout << "Welcome to" << endl;
+	cout << ":::     ::: :::::::::: :::::::::: :::::::::   ::::::::  " << endl;
+	cout << ":::     ::: :::        :::        :::    ::: :::    ::: " << endl;
+	cout << "+:+     +:+ +:+        +:+        +:+    +:+ +:+    +:+ " << endl;
+	cout << "+#+     +:+ +#++:++#   +#++:++#   +#++:++#+  +#+    +:+ " << endl;
+	cout << " +#+   +#+  +#+        +#+        +#+    +#+ +#+    +#+ " << endl;
+	cout << "  #+#+#+#   #+#        #+#        #+#    #+# #+#    #+# " << endl;
+	cout << "    ###     ########## ########## #########   ########  " << endl;
+	Sleep(200);
+	system("CLS");
+	cout << "Welcome to" << endl;
+	cout << ":::     ::: :::::::::: :::::::::: :::::::::   ::::::::  " << endl;
+	cout << ":::     ::: :::        :::        :::    ::: :::    ::: " << endl;
+	cout << ":::     ::: :::        :::        :::    ::: :::    ::: " << endl;
+	cout << "#+#     :+: +#++:++#   +#++:++#   +#++:++#+  +#+    :+: " << endl;
+	cout << " #+#   #+#  #+#        #+#        #+#    #+# #+#    #+# " << endl;
+	cout << "  +#+#+#+   +#+        +#+        +#+    +#+ +#+    +#+ " << endl;
+	cout << "    ###     ########## ########## #########   ########  " << endl;
+	Sleep(200);
+	system("CLS");
+	cout << "Welcome to" << endl;
+	cout << ":::     ::: :::::::::: :::::::::: :::::::::   ::::::::  " << endl;
+	cout << ":::     ::: :::        :::        :::    ::: :::    ::: " << endl;
+	cout << ":::     ::: :::        :::        :::    ::: :::    ::: " << endl;
+	cout << ":::     ::: ::::::::   ::::::::   :::::::::  :::    ::: " << endl;
+	cout << " +#+   +#+  +#+        +#+        +#+    +#+ +#+    +#+ " << endl;
+	cout << "  #+#+#+#   #+#        #+#        #+#    #+# #+#    #+# " << endl;
+	cout << "    ###     ########## ########## #########   ########  " << endl;
+	Sleep(200);
+	system("CLS");
+	cout << "Welcome to" << endl;
+	cout << ":::     ::: :::::::::: :::::::::: :::::::::   ::::::::  " << endl;
+	cout << ":::     ::: :::        :::        :::    ::: :::    ::: " << endl;
+	cout << ":::     ::: :::        :::        :::    ::: :::    ::: " << endl;
+	cout << ":::     ::: ::::::::   ::::::::   :::::::::  :::    ::: " << endl;
+	cout << " :::   :::  :::        :::        :::    ::: :::    ::: " << endl;
+	cout << "  +#+#+#+   +#+        +#+        +#+    +#+ +#+    +#+ " << endl;
+	cout << "    ###     ########## ########## #########   ########  " << endl;
+	Sleep(200);
+	system("CLS");
+	cout << "Welcome to" << endl;
+	cout << ":::     ::: :::::::::: :::::::::: :::::::::   ::::::::  " << endl;
+	cout << ":::     ::: :::        :::        :::    ::: :::    ::: " << endl;
+	cout << ":::     ::: :::        :::        :::    ::: :::    ::: " << endl;
+	cout << ":::     ::: ::::::::   ::::::::   :::::::::  :::    ::: " << endl;
+	cout << " :::   :::  :::        :::        :::    ::: :::    ::: " << endl;
+	cout << "  :::::::   :::        :::        :::    ::: :::    ::: " << endl;
+	cout << "    ###     ########## ########## #########   ########  " << endl;
+	Sleep(200);
+	system("CLS");
+	cout << "Welcome to" << endl;
+	cout << ":::     ::: :::::::::: :::::::::: :::::::::   ::::::::  " << endl;
+	cout << ":::     ::: :::        :::        :::    ::: :::    ::: " << endl;
+	cout << ":::     ::: :::        :::        :::    ::: :::    ::: " << endl;
+	cout << ":::     ::: ::::::::   ::::::::   :::::::::  :::    ::: " << endl;
+	cout << " :::   :::  :::        :::        :::    ::: :::    ::: " << endl;
+	cout << "  :::::::   :::        :::        :::    ::: :::    ::: " << endl;
+	cout << "    :::     :::::::::: :::::::::: :::::::::   ::::::::  " << endl;
+	Sleep(500);
+	system("CLS");
+}
 void update(){
 compOutput = "I'll check if a new version is available...";
 cout << compOutput << endl << endl;
@@ -32,7 +116,9 @@ else {
 	writer21.close();
 }
 letter = '_';
-while (letter == '_' || letter == ' ') {
+updateabort = 0;
+while (letter == '_' && updateabort < 30 || letter == ' ' && updateabort < 30) {
+	updateabort++;
 	tempString = "";
 	ifstream reader21("done.txt");
 	if (!reader21) {
@@ -43,24 +129,8 @@ while (letter == '_' || letter == ' ') {
 		reader21.close();
 		letter2++;
 	}
-	cryptable = "qyfhuec";
-	uncyrptable = "ray*_";
-	keyChar = 0; //for kepping track of char in code
-	cryptChar = 0;
-	key = "aAbrurb";
-	while (keyChar != 2) { //while its not on *
-		srand(time(0)); // This will ensure a really randomized number by help of time.
-		cryptChar = rand() % 2 + 1; //rand char
-		if (cryptable[cryptChar] == '_') { //will read _ if char is already used
-
-		}
-		else if (cryptable[cryptChar] != '_') {
-			key[keyChar] = cryptable[cryptChar]; //transfer encrypted char
-			cryptable[cryptChar] = '_'; //will put _ if char is already used
-			keyChar++; //goes to next char for key
-			cout << "."; //to show progress
-		}
-	}
+	Sleep(500);
+	cout << ".";
 }
 letter2 = 0;
 cout << endl;
@@ -94,7 +164,10 @@ else {
 }
 compat.pop_back();
 version.pop_back();
-if (version == cversion) {
+if (updateabort == 30) {
+	cout << "Network Error: Please connect to the internet and try again" << endl;
+}
+else if (version == cversion) {
 	cout << "You are up to date!" << endl;
 	tempString = "1";
 }

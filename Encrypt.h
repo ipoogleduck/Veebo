@@ -12,12 +12,12 @@
 
 using namespace std;
 void encryptionbone() {
+	cryptChar = 0;
 	key = "";
 	ifstream readere("bone.txt");
 	if (!readere) {
 	}
 	else {
-
 		for (int i = 0; !readere.eof(); i++) {
 			readere.get(letter);
 			key += letter;
@@ -25,7 +25,7 @@ void encryptionbone() {
 		readere.close();
 	}
 	key.pop_back();
-	passcheckfile += "*";
+	cryptMessage += "*";
 	while (cryptMessage[cryptChar] != '*') {
 		keyChar = 0;
 		while (uncyrptable[keyChar] != '_') {
@@ -40,12 +40,13 @@ void encryptionbone() {
 		}
 		cryptChar++;
 	}
-
 }
 void encryptionbtwo() {
+	cryptChar = 0;
 	key = "";
 	ifstream readerer("btwo.txt");
 	if (!readerer) {
+		cout << "WHAT NOOOO (It didn't work)" << endl;
 	}
 	else {
 
@@ -56,7 +57,7 @@ void encryptionbtwo() {
 		readerer.close();
 	}
 	key.pop_back();
-	passcheckfile += "*";
+	cryptMessage += "*";
 	while (cryptMessage[cryptChar] != '*') {
 		keyChar = 0;
 		while (uncyrptable[keyChar] != '_') {
@@ -72,5 +73,4 @@ void encryptionbtwo() {
 		}
 		cryptChar++;
 	}
-
 }
