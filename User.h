@@ -143,13 +143,18 @@ void createUser() { //Sets up info
 			cout << "Retype password" << endl;
 			getline(cin, confirmpass);
 			if (passtype == confirmpass) {
-				cryptMessage = passtype;
-				encryptionbone();               ////
-				passtype = cryptMessage;
-				writerPass << passtype;
-				cryptMessage = passtype;
-				decryptionbone();               ////
-				passtype = cryptMessage;
+				if (startfromclean != "YES") {
+					cryptMessage = passtype;
+					encryptionbone();               ////
+					passtype = cryptMessage;
+					writerPass << passtype;
+					cryptMessage = passtype;
+					decryptionbone();               ////
+					passtype = cryptMessage;
+				}
+				else {
+
+				}
 			}
 			else {
 				cout << "Passwords don't match, please try again" << endl;
@@ -162,134 +167,138 @@ void createUser() { //Sets up info
 		cout << "When you log back in after loging out use your name as your password" << endl;
 		cout << "You can change this at a later time by typing 'add password'" << endl;
 		cryptMessage = name;
-		encryptionbone();               ////
-		name = cryptMessage;
-		writerPass << name;
+		if (startfromclean != "YES") {
+			encryptionbone();               ////
+			name = cryptMessage;
+			writerPass << name;
+		}
 		writerlog << "";
 	}
 	//add crypter to crypt pass
 	writerPass.close();
 	writerlog.close();
-	cout << "Your account has been created, when you want to log out, type 'logout'" << endl;
+	cout << "When you want to log out, type 'logout'" << endl;
 	compOutputLine2 = "";
 	compOutputLine3 = "";
-	ofstream writetgg("lastpass.txt"); //I gave up on good names for writer and reader
-	diditlog = "";
-	if (account == "1") {
-		ifstream use1222reader(logdid1);
-		if (!use1222reader) {
+	if (startfromclean != "YES") {
+		ofstream writetgg("lastpass.txt"); //I gave up on good names for writer and reader
+		diditlog = "";
+		if (account == "1") {
+			ifstream use1222reader(logdid1);
+			if (!use1222reader) {
 
-		}
-		else {
-			for (int i = 0; !use1222reader.eof(); i++) {
-				use1222reader.get(letter);
-				diditlog += letter;
 			}
-			use1222reader.close();
-			diditlog.pop_back();
-		}
-		ifstream nnmmnmm(nastpass1);
-		if (!nnmmnmm) {
+			else {
+				for (int i = 0; !use1222reader.eof(); i++) {
+					use1222reader.get(letter);
+					diditlog += letter;
+				}
+				use1222reader.close();
+				diditlog.pop_back();
+			}
+			ifstream nnmmnmm(nastpass1);
+			if (!nnmmnmm) {
 
-		}
-		else {
-			passcheckfile = "";
-			for (int i = 0; !nnmmnmm.eof(); i++) {
-				nnmmnmm.get(letter);
-				passcheckfile += letter;
 			}
-			nnmmnmm.close();
-			passcheckfile.pop_back();
+			else {
+				passcheckfile = "";
+				for (int i = 0; !nnmmnmm.eof(); i++) {
+					nnmmnmm.get(letter);
+					passcheckfile += letter;
+				}
+				nnmmnmm.close();
+				passcheckfile.pop_back();
+			}
+			writetgg << passcheckfile;
 		}
-		writetgg << passcheckfile;
+
+		else if (account == "2") {
+			ifstream use1222reader(logdid2);
+			if (!use1222reader) {
+
+			}
+			else {
+				for (int i = 0; !use1222reader.eof(); i++) {
+					use1222reader.get(letter);
+					diditlog += letter;
+				}
+				use1222reader.close();
+				diditlog.pop_back();
+			}
+			ifstream nnmmnmm(nastpass2);
+			if (!nnmmnmm) {
+
+			}
+			else {
+				passcheckfile = "";
+				for (int i = 0; !nnmmnmm.eof(); i++) {
+					nnmmnmm.get(letter);
+					passcheckfile += letter;
+				}
+				nnmmnmm.close();
+				passcheckfile.pop_back();
+			}
+			writetgg << passcheckfile;
+		}
+
+		else if (account == "3") {
+			ifstream use1222reader(logdid3);
+			if (!use1222reader) {
+
+			}
+			else {
+				for (int i = 0; !use1222reader.eof(); i++) {
+					use1222reader.get(letter);
+					diditlog += letter;
+				}
+				use1222reader.close();
+				diditlog.pop_back();
+			}
+			ifstream nnmmnmm(nastpass3);
+			if (!nnmmnmm) {
+
+			}
+			else {
+				passcheckfile = "";
+				for (int i = 0; !nnmmnmm.eof(); i++) {
+					nnmmnmm.get(letter);
+					passcheckfile += letter;
+				}
+				nnmmnmm.close();
+				passcheckfile.pop_back();
+			}
+			writetgg << passcheckfile;
+		}
+		else if (account == "4") {
+			ifstream use1222reader(logdid4);
+			if (!use1222reader) {
+
+			}
+			else {
+				for (int i = 0; !use1222reader.eof(); i++) {
+					use1222reader.get(letter);
+					diditlog += letter;
+				}
+				use1222reader.close();
+				diditlog.pop_back();
+			}
+			ifstream nnmmnmm(nastpass4);
+			if (!nnmmnmm) {
+
+			}
+			else {
+				passcheckfile = "";
+				for (int i = 0; !nnmmnmm.eof(); i++) {
+					nnmmnmm.get(letter);
+					passcheckfile += letter;
+				}
+				nnmmnmm.close();
+				passcheckfile.pop_back();
+			}
+			writetgg << passcheckfile;
+		}
+		writetgg.close();
 	}
-
-	else if (account == "2") {
-		ifstream use1222reader(logdid2);
-		if (!use1222reader) {
-
-		}
-		else {
-			for (int i = 0; !use1222reader.eof(); i++) {
-				use1222reader.get(letter);
-				diditlog += letter;
-			}
-			use1222reader.close();
-			diditlog.pop_back();
-		}
-		ifstream nnmmnmm(nastpass2);
-		if (!nnmmnmm) {
-
-		}
-		else {
-			passcheckfile = "";
-			for (int i = 0; !nnmmnmm.eof(); i++) {
-				nnmmnmm.get(letter);
-				passcheckfile += letter;
-			}
-			nnmmnmm.close();
-			passcheckfile.pop_back();
-		}
-		writetgg << passcheckfile;
-	}
-
-	else if (account == "3") {
-		ifstream use1222reader(logdid3);
-		if (!use1222reader) {
-
-		}
-		else {
-			for (int i = 0; !use1222reader.eof(); i++) {
-				use1222reader.get(letter);
-				diditlog += letter;
-			}
-			use1222reader.close();
-			diditlog.pop_back();
-		}
-		ifstream nnmmnmm(nastpass3);
-		if (!nnmmnmm) {
-
-		}
-		else {
-			passcheckfile = "";
-			for (int i = 0; !nnmmnmm.eof(); i++) {
-				nnmmnmm.get(letter);
-				passcheckfile += letter;
-			}
-			nnmmnmm.close();
-			passcheckfile.pop_back();
-		}
-		writetgg << passcheckfile;
-	}
-	else if (account == "4") {
-		ifstream use1222reader(logdid4);
-		if (!use1222reader) {
-
-		}
-		else {
-			for (int i = 0; !use1222reader.eof(); i++) {
-				use1222reader.get(letter);
-				diditlog += letter;
-			}
-			use1222reader.close();
-			diditlog.pop_back();
-		}
-		ifstream nnmmnmm(nastpass4);
-		if (!nnmmnmm) {
-
-		}
-		else {
-			passcheckfile = "";
-			for (int i = 0; !nnmmnmm.eof(); i++) {
-				nnmmnmm.get(letter);
-				passcheckfile += letter;
-			}
-			nnmmnmm.close();
-			passcheckfile.pop_back();
-		}
-		writetgg << passcheckfile;
-	}
-	writetgg.close();
 }
 
 void addUser() { //Checks users
@@ -624,6 +633,9 @@ void switchUser() {
 					}
 					nnmmnmm.close();
 					passcheckfile.pop_back();
+					cryptMessage = passcheckfile;
+					decryptionbone();               ////
+					passcheckfile = cryptMessage;
 				}
 				cryptMessage = passcheckfile; //
 				encryptionbtwo(); //
@@ -656,6 +668,9 @@ void switchUser() {
 					}
 					nnmmnmm.close();
 					passcheckfile.pop_back();
+					cryptMessage = passcheckfile;
+					decryptionbone();               ////
+					passcheckfile = cryptMessage;
 				}
 				cryptMessage = passcheckfile; //
 				encryptionbtwo(); //
@@ -688,6 +703,9 @@ void switchUser() {
 					}
 					nnmmnmm.close();
 					passcheckfile.pop_back();
+					cryptMessage = passcheckfile;
+					decryptionbone();               ////
+					passcheckfile = cryptMessage;
 				}
 				cryptMessage = passcheckfile; //
 				encryptionbtwo(); //
@@ -719,6 +737,9 @@ void switchUser() {
 					}
 					nnmmnmm.close();
 					passcheckfile.pop_back();
+					cryptMessage = passcheckfile;
+					decryptionbone();               ////
+					passcheckfile = cryptMessage;
 				}
 				cryptMessage = passcheckfile; //
 				encryptionbtwo(); //
