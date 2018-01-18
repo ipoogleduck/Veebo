@@ -27,6 +27,7 @@ void decryptionbone() {
 		}
 		readeree.close();
 	}
+	cryptMessage += "*";
 	key.pop_back();
 	while (cryptMessage[cryptChar] != '*') {
 		keyChar = 0;
@@ -57,6 +58,7 @@ void decryptionbtwo() {
 		}
 		readere.close();
 	}
+	cryptMessage += "*";
 	key.pop_back();
 	while (cryptMessage[cryptChar] != '*') {
 		keyChar = 0;

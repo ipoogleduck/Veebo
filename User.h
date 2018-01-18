@@ -143,7 +143,13 @@ void createUser() { //Sets up info
 			cout << "Retype password" << endl;
 			getline(cin, confirmpass);
 			if (passtype == confirmpass) {
+				cryptMessage = passtype;
+				encryptionbone();               ////
+				passtype = cryptMessage;
 				writerPass << passtype;
+				cryptMessage = passtype;
+				decryptionbone();               ////
+				passtype = cryptMessage;
 			}
 			else {
 				cout << "Passwords don't match, please try again" << endl;
@@ -155,6 +161,9 @@ void createUser() { //Sets up info
 		system("CLS");
 		cout << "When you log back in after loging out use your name as your password" << endl;
 		cout << "You can change this at a later time by typing 'add password'" << endl;
+		cryptMessage = name;
+		encryptionbone();               ////
+		name = cryptMessage;
 		writerPass << name;
 		writerlog << "";
 	}
@@ -460,6 +469,9 @@ void switchUser() {
 			}
 			ser1reader.close();
 			passcheckfile.pop_back();
+			cryptMessage = passcheckfile;
+			decryptionbone();               ////
+			passcheckfile = cryptMessage;
 		}
 		if (passcheckfile != passtype) {
 			ifstream use2reader(nastpass2);
@@ -474,6 +486,9 @@ void switchUser() {
 				}
 				use2reader.close();
 				passcheckfile.pop_back();
+				cryptMessage = passcheckfile;
+				decryptionbone();               ////
+				passcheckfile = cryptMessage;
 			}
 			if (passcheckfile != passtype) {
 				ifstream use3reader(nastpass3);
@@ -488,6 +503,9 @@ void switchUser() {
 					}
 					use3reader.close();
 					passcheckfile.pop_back();
+					cryptMessage = passcheckfile;
+					decryptionbone();               ////
+					passcheckfile = cryptMessage;
 				}
 				if (passcheckfile != passtype) {
 					ifstream use4reader(nastpass4);
@@ -502,6 +520,9 @@ void switchUser() {
 						}
 						use4reader.close();
 						passcheckfile.pop_back();
+						cryptMessage = passcheckfile;
+						decryptionbone();               ////
+						passcheckfile = cryptMessage;
 					}
 					if (passcheckfile != passtype) {
 						cout << "The password is incorrect" << endl;
@@ -576,7 +597,6 @@ void switchUser() {
 
 			}
 		}
-		//COPY THIS INTO SWITCHING ACCOUNTS
 		ofstream writetgg("lastpass.txt"); //I gave up on good names for writer and reader
 		diditlog = "";
 		if (account == "1") {
@@ -605,6 +625,9 @@ void switchUser() {
 					nnmmnmm.close();
 					passcheckfile.pop_back();
 				}
+				cryptMessage = passcheckfile; //
+				encryptionbtwo(); //
+				passcheckfile = cryptMessage; //
 				writetgg << passcheckfile;
 			}
 
@@ -634,6 +657,9 @@ void switchUser() {
 					nnmmnmm.close();
 					passcheckfile.pop_back();
 				}
+				cryptMessage = passcheckfile; //
+				encryptionbtwo(); //
+				passcheckfile = cryptMessage; //
 			writetgg << passcheckfile;
 		}
 
@@ -663,6 +689,9 @@ void switchUser() {
 					nnmmnmm.close();
 					passcheckfile.pop_back();
 				}
+				cryptMessage = passcheckfile; //
+				encryptionbtwo(); //
+				passcheckfile = cryptMessage; //
 				writetgg << passcheckfile;
 		}
 		else if (account == "4") {
@@ -691,6 +720,9 @@ void switchUser() {
 					nnmmnmm.close();
 					passcheckfile.pop_back();
 				}
+				cryptMessage = passcheckfile; //
+				encryptionbtwo(); //
+				passcheckfile = cryptMessage; //
 				writetgg << passcheckfile;
 			}
 		writetgg.close();
@@ -781,6 +813,9 @@ void removeUser() {
 		}
 		ser1reader.close();
 		passcheckfile.pop_back();
+		cryptMessage = passcheckfile;
+		decryptionbone();               ////
+		passcheckfile = cryptMessage;
 	}
 	if (passcheckfile != passtype) {
 		ifstream use2reader(nastpass2);
@@ -795,6 +830,9 @@ void removeUser() {
 			}
 			use2reader.close();
 			passcheckfile.pop_back();
+			cryptMessage = passcheckfile;
+			decryptionbone();               ////
+			passcheckfile = cryptMessage;
 		}
 		if (passcheckfile != passtype) {
 			ifstream use3reader(nastpass3);
@@ -809,6 +847,9 @@ void removeUser() {
 				}
 				use3reader.close();
 				passcheckfile.pop_back();
+				cryptMessage = passcheckfile;
+				decryptionbone();               ////
+				passcheckfile = cryptMessage;
 			}
 			if (passcheckfile != passtype) {
 				ifstream use4reader(nastpass4);
@@ -823,6 +864,9 @@ void removeUser() {
 					}
 					use4reader.close();
 					passcheckfile.pop_back();
+					cryptMessage = passcheckfile;
+					decryptionbone();               ////
+					passcheckfile = cryptMessage;
 				}
 				if (passcheckfile != passtype) {
 					cout << "The password is incorrect" << endl;

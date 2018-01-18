@@ -40,6 +40,7 @@ void encryptionbone() {
 		}
 		cryptChar++;
 	}
+	cryptMessage.pop_back();
 }
 void encryptionbtwo() {
 	cryptChar = 0;
@@ -73,4 +74,5 @@ void encryptionbtwo() {
 		}
 		cryptChar++;
 	}
+	cryptMessage.pop_back();
 }
