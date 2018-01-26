@@ -16,7 +16,7 @@ using namespace std;
 
 void t2() {
 	cout << "\nI'm going to create two keys to keep your account more secure..." << endl << "This may take up to three minutes..." << endl;
-	CString str = "C:/Veebo/Keycreate.vbs";
+	CString str = "C:/Veebo/OTAnew/Keycreate.vbs";
 	CString action = "open";
 	ShellExecute(NULL, action, str, NULL, NULL, SW_SHOW);
 	key = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ .?!,0123456789";
@@ -42,7 +42,7 @@ void t2() {
 	keyChar = 0; //for kepping track of char in code
 	cryptChar = 0;
 	cout << "\nCreating 2nd Key..." << endl;
-	str = "C:/Veebo/Keycreate2.vbs";
+	str = "C:/Veebo/OTAnew/Keycreate2.vbs";
 	action = "open";
 	ShellExecute(NULL, action, str, NULL, NULL, SW_SHOW);
 	key = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ .?!,0123456789";

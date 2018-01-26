@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2024
+VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Veebo", "Veebo.vcxproj", "{0864E5FD-6F5F-4848-B93F-0DFB72A2B8F0}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Veebo Setup", "..\Veebo Setup\Veebo Setup.vdproj", "{56AED2EA-6CAB-420F-9AB8-04465A9F7946}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Veebo Setup", "..\Veebo Setup\Veebo Setup.vdproj", "{8E45A991-96BC-4BE4-959A-0ECF526C34DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,17 +17,16 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{0864E5FD-6F5F-4848-B93F-0DFB72A2B8F0}.Debug|x64.ActiveCfg = Debug|x64
 		{0864E5FD-6F5F-4848-B93F-0DFB72A2B8F0}.Debug|x64.Build.0 = Debug|x64
-		{0864E5FD-6F5F-4848-B93F-0DFB72A2B8F0}.Debug|x86.ActiveCfg = Release|Win32
-		{0864E5FD-6F5F-4848-B93F-0DFB72A2B8F0}.Debug|x86.Build.0 = Release|Win32
+		{0864E5FD-6F5F-4848-B93F-0DFB72A2B8F0}.Debug|x86.ActiveCfg = Debug|Win32
+		{0864E5FD-6F5F-4848-B93F-0DFB72A2B8F0}.Debug|x86.Build.0 = Debug|Win32
 		{0864E5FD-6F5F-4848-B93F-0DFB72A2B8F0}.Release|x64.ActiveCfg = Release|x64
 		{0864E5FD-6F5F-4848-B93F-0DFB72A2B8F0}.Release|x64.Build.0 = Release|x64
 		{0864E5FD-6F5F-4848-B93F-0DFB72A2B8F0}.Release|x86.ActiveCfg = Release|Win32
 		{0864E5FD-6F5F-4848-B93F-0DFB72A2B8F0}.Release|x86.Build.0 = Release|Win32
-		{56AED2EA-6CAB-420F-9AB8-04465A9F7946}.Debug|x64.ActiveCfg = Debug
-		{56AED2EA-6CAB-420F-9AB8-04465A9F7946}.Debug|x86.ActiveCfg = Release
-		{56AED2EA-6CAB-420F-9AB8-04465A9F7946}.Debug|x86.Build.0 = Release
-		{56AED2EA-6CAB-420F-9AB8-04465A9F7946}.Release|x64.ActiveCfg = Release
-		{56AED2EA-6CAB-420F-9AB8-04465A9F7946}.Release|x86.ActiveCfg = Release
+		{8E45A991-96BC-4BE4-959A-0ECF526C34DD}.Debug|x64.ActiveCfg = Debug
+		{8E45A991-96BC-4BE4-959A-0ECF526C34DD}.Debug|x86.ActiveCfg = Debug
+		{8E45A991-96BC-4BE4-959A-0ECF526C34DD}.Release|x64.ActiveCfg = Release
+		{8E45A991-96BC-4BE4-959A-0ECF526C34DD}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
