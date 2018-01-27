@@ -99,7 +99,7 @@ void startup() {
 	system("CLS");
 }
 void update(){
-compOutput = "I'll check if a new version is available...";
+compOutput = "I'll check if an update is available...";
 cout << compOutput << endl << endl;
 CString str = "C:/Veebo/Vcheck.bat";
 CString action = "open";

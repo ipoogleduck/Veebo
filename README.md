@@ -1,5 +1,5 @@
-# Veebo version 0.2.3.3
-Veebo is a personal assistant that can answer questions and help you with your homework
+# Veebo version 0.4.1 BETA
+Veebo is a personal assistant that can do a lot of stuff. Download it from http://ipooglecodes.weebly.com
 # NOTICE: 
 This program is in beta stage and may not be able to complete every function yet.
 <div align="center">
