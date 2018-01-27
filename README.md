@@ -4,6 +4,6 @@ Veebo is a personal assistant that can do a lot of stuff. Download it from http:
 This program is in beta stage and may not be able to complete every function yet.
 <div align="center">
   
-<img src="https://ipooglecodes.weebly.com/uploads/9/7/6/2/97620300/veebologo.jpg"><br><br>
+<img src="https://ipooglecodes.weebly.com/uploads/9/7/6/2/97620300/veebologo.png"><br><br>
 
 </div>
