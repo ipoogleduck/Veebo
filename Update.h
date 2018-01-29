@@ -117,7 +117,7 @@ else {
 }
 letter = '_';
 updateabort = 0;
-while (letter == '_' && updateabort < 30 || letter == ' ' && updateabort < 30) {
+while (letter == '_' && updateabort < 50 || letter == ' ' && updateabort < 50) {
 	updateabort++;
 	tempString = "";
 	ifstream reader21("done.txt");
@@ -136,7 +136,6 @@ letter2 = 0;
 cout << endl;
 ifstream reader3("here.txt");
 if (!reader3) {
-	cout << "Error";
 	tempString = "0";
 }
 else {
@@ -151,7 +150,6 @@ letter = 0;
 compat = "";
 ifstream reader7("compat.txt");
 if (!reader7) {
-	cout << "Error";
 	tempString = "0";
 }
 else {
@@ -162,9 +160,27 @@ else {
 	}
 	reader7.close();
 }
-compat.pop_back();
-version.pop_back();
-if (updateabort == 30) {
+
+letter = 0;
+whatsnew = "";
+ifstream reader79("whatsnew.txt");
+if (!reader79) {
+	tempString = "0";
+}
+else {
+
+	for (int i = 0; !reader79.eof(); i++) {
+		reader79.get(letter);
+		whatsnew += letter;
+	}
+	reader79.close();
+}
+if (updateabort != 50) {
+	compat.pop_back();
+	version.pop_back();
+	whatsnew.pop_back();
+}
+if (updateabort == 50) {
 	cout << "Network Error: Please connect to the internet and try again" << endl;
 }
 else if (version == cversion) {
@@ -173,7 +189,7 @@ else if (version == cversion) {
 }
 else {
 	if (compat == ccompat) {
-		cout << "Update available for version number " << version << ". Do you want to update?" << endl;
+		cout << "Update available for version number " << version << endl << endl << "This update includes:" << endl << whatsnew << endl << endl << "Do you want to update?" << endl;
 		getline(cin, tempString);
 		if (tempString == "Yes" || tempString == "yes") {
 			cout << "Beep Beep" << endl;
@@ -188,7 +204,7 @@ else {
 		}
 	}
 	else {
-		cout << "There is an update for version " << version << endl << "Unfortunately there are parts of this update that cannot be updated by the auto update feature" << endl;
+		cout << "There is an update for version " << version << endl << endl << "This update includes:" << endl << whatsnew << endl << endl << "Unfortunately there are parts of this update that cannot be updated by the auto update feature" << endl;
 		cout << "You will have to reinstall Veebo using the installer. Would you like to proceed to the instructions?" << endl;
 		getline(cin, tempString);
 		if (tempString == "Yes" || tempString == "yes") {
