@@ -17,6 +17,7 @@ int updateabort;
 
 char quote = '"';
 void startup() {
+	system("CLS");
 	cout << "Welcome to" << endl;
 	cout << ":+:     :+: :+::+::+:: :+::+::+:: :+:+:+:+:   :+:+:+:+  " << endl;
 	cout << ":+:     :+: :+:        :+:        :+:    :+: :+:    :+: " << endl;
@@ -189,7 +190,7 @@ else if (version == cversion) {
 }
 else {
 	if (compat == ccompat) {
-		cout << "Update available for version number " << version << endl << endl << "This update includes:" << endl << whatsnew << endl << endl << "Do you want to update?" << endl;
+		cout << "Update available for version number " << version << endl << endl << whatsnew << endl << endl << "Do you want to update?" << endl;
 		getline(cin, tempString);
 		if (tempString == "Yes" || tempString == "yes") {
 			cout << "Beep Beep" << endl;

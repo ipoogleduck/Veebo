@@ -299,6 +299,16 @@ void createUser() { //Sets up info
 		}
 		writetgg.close();
 	}
+	Sleep(1000);
+	cout << ".";
+	Sleep(500);
+	cout << ".";
+	Sleep(500);
+	cout << ".";
+	Sleep(500);
+	cout << ".";
+	Sleep(500);
+	cout << ".";
 }
 
 void addUser() { //Checks users
