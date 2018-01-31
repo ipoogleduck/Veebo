@@ -407,46 +407,6 @@ void addUser() { //Checks users
 	}
 	
 }
-void transferFiles() {
-	ifstream reade1j("betasurvey.txt");
-	if (!reade1j) {
-
-	}
-	else {
-		lastType = "";
-		for (int i = 0; !reade1j.eof(); i++) {
-			reade1j.get(letter);
-			lastType += letter;
-		}
-		reade1j.close();
-	}
-	currentType.pop_back();
-	lastType.pop_back();
-	ofstream writer6799("yorn.txt");
-	if (!writer6799) {
-
-	}
-	else {
-		writer6799 << "M";
-		writer6799.close();
-	}
-	ofstream writer674(betasurvey1);
-	if (!writer674) {
-
-	}
-	else {
-		writer674 << lastType;
-		writer674.close();
-	}
-	currentY = yorn1;
-	currentN = name1;
-	currentB = betasurvey1;
-	currentT = theme1;
-	nastpass = nastpass1;
-	logdid = logdid1;
-	account = "1";
-	//addUser();
-}
 void switchUser() {
 	if (gogo != "hhy") {
 		void logout();
@@ -1032,6 +992,7 @@ void removeUser() {
 			}
 			cout << "You will need to log in again. Click enter..." << endl;
 			cin.ignore();
+			startup();
 			logout();
 			didalready = "mnm";
 		}

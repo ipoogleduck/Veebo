@@ -204,7 +204,7 @@ else {
 		}
 	}
 	else {
-		cout << "There is an update for version " << version << endl << endl << "This update includes:" << endl << whatsnew << endl << endl << "Unfortunately there are parts of this update that cannot be updated by the auto update feature" << endl;
+		cout << "There is an update for version " << version << endl << endl << whatsnew << endl << endl << "Unfortunately there are parts of this update that cannot be updated by the auto update feature" << endl;
 		cout << "You will have to reinstall Veebo using the installer. Would you like to proceed to the instructions?" << endl;
 		getline(cin, tempString);
 		if (tempString == "Yes" || tempString == "yes") {
