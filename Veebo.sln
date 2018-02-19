@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Veebo", "Veebo.vcxproj", "{
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Veebo Setup", "..\Veebo Setup\Veebo Setup.vdproj", "{BC0FBD2B-7DDF-4A1A-AF85-4B549A204A73}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Veebo Beta Software", "..\Veebo Beta Software\Veebo Beta Software.vdproj", "{F162E2CC-5727-4669-9EF0-BB5EBA66D9D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,10 @@ Global
 		{BC0FBD2B-7DDF-4A1A-AF85-4B549A204A73}.Release|x64.Build.0 = Release
 		{BC0FBD2B-7DDF-4A1A-AF85-4B549A204A73}.Release|x86.ActiveCfg = Release
 		{BC0FBD2B-7DDF-4A1A-AF85-4B549A204A73}.Release|x86.Build.0 = Release
+		{F162E2CC-5727-4669-9EF0-BB5EBA66D9D8}.Debug|x64.ActiveCfg = Debug
+		{F162E2CC-5727-4669-9EF0-BB5EBA66D9D8}.Debug|x86.ActiveCfg = Debug
+		{F162E2CC-5727-4669-9EF0-BB5EBA66D9D8}.Release|x64.ActiveCfg = Release
+		{F162E2CC-5727-4669-9EF0-BB5EBA66D9D8}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
