@@ -19,6 +19,10 @@ void t2() {
 	CString str = "C:/Veebo/OTAnew/Keycreate.vbs";
 	CString action = "open";
 	ShellExecute(NULL, action, str, NULL, NULL, SW_SHOW);
+	cryptChar = 0;
+	keyChar = 0;
+	cryptable = "qQwWeErRtTyYuUiIoOpPaAsSdDfFgGhHjJkKlLzZxXcCvVbBnNmM1234567890#:><(){}[]-?!@^&=+";
+	uncyrptable = "ravLNcED!Yhe5ZQq2Sb?U lBRGCdgA7mn8413tpjuKFMJHzxoPX,W6wfOVI.Ty0iks9*_";
 	key = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ .?!,0123456789";
 	while (keyChar != 67) { //while its not on *
 		srand(time(0)); // This will ensure a really randomized number by help of time.
@@ -312,11 +316,17 @@ void createUser() { //Sets up info
 }
 
 void addUser() { //Checks users
+	dointro = "";
 	letter = 'h';
 	ifstream user1reader(yorn1);
 	if (!user1reader) {
-		cout << "Yo thats one big error" << endl;
-		cin.ignore();
+		currentY = yorn1;
+		currentN = name1;
+		currentB = betasurvey1;
+		currentT = theme1;
+		nastpass = nastpass1;
+		logdid = logdid1;
+		account = "1";
 		createUser();
 	}
 	else {
@@ -371,6 +381,7 @@ void addUser() { //Checks users
 								user4reader.close();
 								if (letter == 'Y') {
 									cout << "There are no user slots available, please make space by typing 'delete user'" << endl;
+									dointro = "MnM";
 								}
 								else {
 									currentY = yorn4;
