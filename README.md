@@ -1,4 +1,4 @@
-# Veebo version 1.0
+# Veebo version 1.1
 Veebo is a personal assistant that can do some pretty steamy things. [Download Veebo here](https://ipooglecodes.weebly.com/application-downloads.html) 
 # Features
 - Type 'Add user' to add an account
