@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Veebo", "Veebo.vcxproj", "{0864E5FD-6F5F-4848-B93F-0DFB72A2B8F0}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Veebo Setup", "..\Veebo Setup\Veebo Setup.vdproj", "{BC0FBD2B-7DDF-4A1A-AF85-4B549A204A73}"
-EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Veebo Beta Software", "..\Veebo Beta Software\Veebo Beta Software.vdproj", "{F162E2CC-5727-4669-9EF0-BB5EBA66D9D8}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Veebo Setup", "..\Veebo Setup\Veebo Setup.vdproj", "{2D9BBB04-C5F8-4A53-A8B3-17219FA50B59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,19 +25,19 @@ Global
 		{0864E5FD-6F5F-4848-B93F-0DFB72A2B8F0}.Release|x64.Build.0 = Release|x64
 		{0864E5FD-6F5F-4848-B93F-0DFB72A2B8F0}.Release|x86.ActiveCfg = Release|Win32
 		{0864E5FD-6F5F-4848-B93F-0DFB72A2B8F0}.Release|x86.Build.0 = Release|Win32
-		{BC0FBD2B-7DDF-4A1A-AF85-4B549A204A73}.Debug|x64.ActiveCfg = Debug
-		{BC0FBD2B-7DDF-4A1A-AF85-4B549A204A73}.Debug|x64.Build.0 = Debug
-		{BC0FBD2B-7DDF-4A1A-AF85-4B549A204A73}.Debug|x86.ActiveCfg = Debug
-		{BC0FBD2B-7DDF-4A1A-AF85-4B549A204A73}.Debug|x86.Build.0 = Debug
-		{BC0FBD2B-7DDF-4A1A-AF85-4B549A204A73}.Release|x64.ActiveCfg = Release
-		{BC0FBD2B-7DDF-4A1A-AF85-4B549A204A73}.Release|x64.Build.0 = Release
-		{BC0FBD2B-7DDF-4A1A-AF85-4B549A204A73}.Release|x86.ActiveCfg = Release
-		{BC0FBD2B-7DDF-4A1A-AF85-4B549A204A73}.Release|x86.Build.0 = Release
 		{F162E2CC-5727-4669-9EF0-BB5EBA66D9D8}.Debug|x64.ActiveCfg = Debug
 		{F162E2CC-5727-4669-9EF0-BB5EBA66D9D8}.Debug|x86.ActiveCfg = Debug
 		{F162E2CC-5727-4669-9EF0-BB5EBA66D9D8}.Release|x64.ActiveCfg = Release
 		{F162E2CC-5727-4669-9EF0-BB5EBA66D9D8}.Release|x86.ActiveCfg = Release
 		{F162E2CC-5727-4669-9EF0-BB5EBA66D9D8}.Release|x86.Build.0 = Release
+		{2D9BBB04-C5F8-4A53-A8B3-17219FA50B59}.Debug|x64.ActiveCfg = Debug
+		{2D9BBB04-C5F8-4A53-A8B3-17219FA50B59}.Debug|x64.Build.0 = Debug
+		{2D9BBB04-C5F8-4A53-A8B3-17219FA50B59}.Debug|x86.ActiveCfg = Debug
+		{2D9BBB04-C5F8-4A53-A8B3-17219FA50B59}.Debug|x86.Build.0 = Debug
+		{2D9BBB04-C5F8-4A53-A8B3-17219FA50B59}.Release|x64.ActiveCfg = Release
+		{2D9BBB04-C5F8-4A53-A8B3-17219FA50B59}.Release|x64.Build.0 = Release
+		{2D9BBB04-C5F8-4A53-A8B3-17219FA50B59}.Release|x86.ActiveCfg = Release
+		{2D9BBB04-C5F8-4A53-A8B3-17219FA50B59}.Release|x86.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

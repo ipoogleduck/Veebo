@@ -754,11 +754,23 @@ void switchUser() {
 			cout << name;
 			cout << ", welcome to Veebo! Say hi, or ask me a question!" << endl;
 			cout << "You can also type 'help' for a list of cool features currently available" << endl;
+			ifstream readerbeta2("BetaProfile.txt");
+			if (!readerbeta2) {
+			}
+			else {
+				cout << "The Veebo Beta Software Program is active on your device" << endl;
+			}
 		}
 		else {
 			system("color F0");
 			cout << "Hi Guest, welcome to Veebo!" << endl;
 			cout << "As a guest, some features may not be availiable" << endl;
+			ifstream readerbeta4("BetaProfile.txt");
+			if (!readerbeta4) {
+			}
+			else {
+				cout << "The Veebo Beta Software Program is active on your device" << endl;
+			}
 			account = "GUEST";
 		}
 		reader2.close();
