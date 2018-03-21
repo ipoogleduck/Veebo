@@ -442,7 +442,7 @@ else {
 		cout << "You will have to reinstall Veebo using the installer. Would you like to proceed to the instructions?" << endl;
 		getline(cin, tempString);
 		if (tempString == "Yes" || tempString == "yes") {
-			ShellExecute(0, 0, L"https://ipooglecodes.weebly.com/uninstall.html", 0, 0, SW_SHOW);
+			ShellExecute(0, 0, L"https://ipooglecodes.weebly.com/veebo-uninstall.html", 0, 0, SW_SHOW);
 			tempString = "0";
 		}
 		else {
@@ -536,7 +536,7 @@ if (tempString != "0") {
 		}
 		else {
 			if (compat == ccompat) {
-				cout << "Beta update available for version number " << version << endl << "Do you want to update?" << endl;
+				cout << "Beta update available for version number " << version  << endl << "Do you want to update?" << endl;
 				getline(cin, tempString);
 				if (tempString == "Yes" || tempString == "yes") {
 					backgroundupdateyorn = "Yes";
@@ -620,6 +620,7 @@ void checkbackgroundupdate() {
 		whatsnew.pop_back();
 
 	if (version == cversion) {
+		backgroundupdateyorn = "No";
 		tempString = "1";
 	}
 	else {
@@ -662,7 +663,7 @@ void checkbackgroundupdate() {
 					writer30691.close();
 				}
 				backgroundupdateyorn = "Yes";
-				ShellExecute(0, 0, L"https://ipooglecodes.weebly.com/uninstall.html", 0, 0, SW_SHOW);
+				ShellExecute(0, 0, L"https://ipooglecodes.weebly.com/veebo-uninstall.html", 0, 0, SW_SHOW);
 				tempString = "0";
 			}
 			else {
@@ -673,4 +674,75 @@ void checkbackgroundupdate() {
 		}
 	}
 	}
+}
+
+void checkbackgroundupdatebeta() {
+
+		tempString = "";
+		ifstream reader211("done.txt");
+		if (!reader211) {
+		}
+		else {
+			reader211.get(letter);
+			tempString += letter;
+			reader211.close();
+			letter2++;
+		}
+		if (letter != '_' && letter != ' ') {
+			version = "";
+			letter2 = 0;
+			ifstream reader31("here.txt");
+			if (!reader31) {
+				tempString = "0";
+			}
+			else {
+
+				for (int i = 0; !reader31.eof(); i++) {
+					reader31.get(letter);
+					version += letter;
+				}
+				reader31.close();
+			}
+			letter = 0;
+			compat = "";
+			ifstream reader71("compat.txt");
+			if (!reader71) {
+				tempString = "0";
+			}
+			else {
+
+				for (int i = 0; !reader71.eof(); i++) {
+					reader71.get(letter);
+					compat += letter;
+				}
+				reader71.close();
+			}
+
+			letter = 0;
+			whatsnew = "";
+			compat.pop_back();
+			version.pop_back();
+			if (version == betaversion) {
+				tempString = "1";
+			}
+			else {
+				if (compat == ccompat) {
+					cout << "By the way, a beta update is available for version number " << version << endl << "Do you want to update?" << endl;
+					getline(cin, tempString);
+					if (tempString == "Yes" || tempString == "yes") {
+						backgroundupdateyorn2 = "Yes";
+						cout << "Beep Beep" << endl;
+						CString str = "C:/Veebo/betainstall.bat";
+						CString action = "open";
+						ShellExecute(NULL, action, str, NULL, NULL, SW_SHOW);
+						tempString = "0";
+					}
+					else {
+						cout << "Okay" << endl;
+						tempString = "1";
+						backgroundupdateyorn2 = "No";
+					}
+				}
+			}
+		}
 }

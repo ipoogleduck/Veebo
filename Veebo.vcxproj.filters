@@ -33,6 +33,9 @@
     <ClInclude Include="Decrypt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="virtualapps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
