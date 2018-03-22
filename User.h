@@ -86,6 +86,28 @@ void createUser() { //Sets up info
 	else {
 		writer << name << endl;
 		writer.close();
+		personality = "";
+		while (personality != "1" && personality != "2" && personality != "3") {
+			cout << "What Veebo personality would you like?" << endl;
+			cout << "1. Classic Vebbo (Default)" << endl;
+			cout << "2. Sassy Veebo" << endl;
+			cout << "3. Illiterate Veebo" << endl;
+			getline(cin, personality);
+			if (personality == "1" || personality == "2" || personality == "3") {
+				ofstream writerPersonality(currentP);
+				if (!writerPersonality) {
+					cout << "Error opening file..." << endl;
+				}
+				else {
+					writerPersonality << personality;
+					writerPersonality.close();
+				}
+				cout << "You can change this at any time by typing 'Change Personality'" << endl;
+			}
+			else {
+				cout << "Please try again and select a valid number" << endl;
+			}
+		}
 		cout << "What theme do you prefer: White/Black" << endl;
 		getline(cin, IDE);
 		if (IDE == "White" || IDE == "white" || IDE == "W" || IDE == "w") {
@@ -97,7 +119,7 @@ void createUser() { //Sets up info
 				cout << "Error 7294 opening file..." << endl;
 			}
 			else {
-				writer30 << IDE << endl;
+				writer30 << IDE;
 				writer30.close();
 			}
 		}
@@ -110,7 +132,7 @@ void createUser() { //Sets up info
 				cout << "Error opening file..." << endl;
 			}
 			else {
-				writer31 << IDE << endl;
+				writer31 << IDE;
 				writer31.close();
 			}
 		}
@@ -320,6 +342,7 @@ void addUser() { //Checks users
 	letter = 'h';
 	ifstream user1reader(yorn1);
 	if (!user1reader) {
+		currentP = personality1;
 		currentY = yorn1;
 		currentN = name1;
 		currentB = betasurvey1;
@@ -337,6 +360,7 @@ void addUser() { //Checks users
 		if (letter == 'Y') {
 			ifstream user2reader(yorn2);
 			if (!user2reader) {
+				currentP = personality2;
 				currentY = yorn2;
 				currentN = name2;
 				currentB = betasurvey2;
@@ -352,6 +376,7 @@ void addUser() { //Checks users
 				if (letter == 'Y') {
 					ifstream user3reader(yorn3);
 					if (!user3reader) {
+						currentP = personality3;
 						currentY = yorn3;
 						currentN = name3;
 						currentB = betasurvey3;
@@ -367,6 +392,7 @@ void addUser() { //Checks users
 						if (letter == 'Y') {
 							ifstream user4reader(yorn4);
 							if (!user4reader) {
+								currentP = personality4;
 								currentY = yorn4;
 								currentN = name4;
 								currentB = betasurvey4;
@@ -384,6 +410,7 @@ void addUser() { //Checks users
 									dointro = "MnM";
 								}
 								else {
+									currentP = personality4;
 									currentY = yorn4;
 									currentN = name4;
 									currentB = betasurvey4;
@@ -395,6 +422,7 @@ void addUser() { //Checks users
 							}
 						}
 						else {
+							currentP = personality3;
 							currentY = yorn3;
 							currentN = name3;
 							currentB = betasurvey3;
@@ -406,6 +434,7 @@ void addUser() { //Checks users
 					}
 					}
 				else {
+					currentP = personality2;
 					currentY = yorn2;
 					currentN = name2;
 					currentB = betasurvey2;
@@ -417,6 +446,7 @@ void addUser() { //Checks users
 			}
 			}
 		else {
+			currentP = personality1;
 			currentY = yorn1;
 			currentN = name1;
 			currentB = betasurvey1;
@@ -438,6 +468,7 @@ void switchUser() {
 	system("CLS");
 	if (passtype == "GUEST" || passtype == "Guest" || passtype == "guest") {
 		account = "GUEST";
+		currentP = "";
 		currentY = "";
 		currentN = "";
 		currentB = "";
@@ -521,6 +552,7 @@ void switchUser() {
 					}
 					else {
 						if (tempString != "Y") {
+							currentP = personality4;
 							currentY = yorn4;
 							currentN = name4;
 							currentB = betasurvey4;
@@ -538,6 +570,7 @@ void switchUser() {
 				}
 				else {
 					if (tempString != "Y") {
+						currentP = personality3;
 						currentY = yorn3;
 						currentN = name3;
 						currentB = betasurvey3;
@@ -555,6 +588,7 @@ void switchUser() {
 			}
 			else {
 				if (tempString != "Y") {
+					currentP = personality2;
 					currentY = yorn2;
 					currentN = name2;
 					currentB = betasurvey2;
@@ -572,6 +606,7 @@ void switchUser() {
 		}
 		else {
 			if (tempString != "Y") {
+				currentP = personality1;
 				currentY = yorn1;
 				currentN = name1;
 				currentB = betasurvey1;
@@ -775,6 +810,15 @@ void switchUser() {
 		}
 		reader2.close();
 
+		ifstream readerper32(currentP);
+		if (!readerper32) {
+		}
+		else {
+			personality = "";
+			readerper32.get(letter);
+			personality += letter;
+			readerper32.close();
+		}
 		ifstream reader31(currentT);
 		if (!reader31) {
 			ofstream writer5444(currentT);
@@ -797,6 +841,7 @@ void switchUser() {
 }
 void logout() {
 	system("CLS");
+	currentP = "";
 	currentY = "";
 	currentN = "";
 	currentB = "";
@@ -889,6 +934,7 @@ void removeUser() {
 				}
 				else {
 					if (tempString != "Y") {
+						currentP = personality4;
 						currentY = yorn4;
 						currentN = name4;
 						currentB = betasurvey4;
@@ -907,6 +953,7 @@ void removeUser() {
 			}
 			else {
 				if (tempString != "Y") {
+					currentP = personality3;
 					currentY = yorn3;
 					currentN = name3;
 					currentB = betasurvey3;
@@ -925,6 +972,7 @@ void removeUser() {
 		}
 		else {
 			if (tempString != "Y") {
+				currentP = personality2;
 				currentY = yorn2;
 				currentN = name2;
 				currentB = betasurvey2;
@@ -943,6 +991,7 @@ void removeUser() {
 	}
 	else {
 		if (tempString != "Y") {
+			currentP = personality1;
 			currentY = yorn1;
 			currentN = name1;
 			currentB = betasurvey1;
@@ -988,6 +1037,9 @@ void removeUser() {
 			ofstream user47343(currentY);
 			user47343 << "";
 			user47343.close();
+			ofstream user473433(currentP);
+			user473433 << "";
+			user473433.close();
 			ofstream user48343(currentN);
 			user48343 << "";
 			user48343.close();
@@ -1013,6 +1065,7 @@ void removeUser() {
 			ifstream readeriiiii(yorn3);
 			ifstream readeriiiiii(yorn4);
 			if (!readeriii && !readeriiii && !readeriiiii && !readeriiiiii) {
+				currentP = personality1;
 				currentY = yorn1;
 				currentN = name1;
 				currentB = betasurvey1;
