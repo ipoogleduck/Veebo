@@ -35,50 +35,54 @@ void tipss() {
 		tips = "5";
 	}
 	else if (tips == "5") {
-		cout << "Tip: Type 'Enable intro' to enable the logo on startup. Type 'help' for more" << endl;
+		cout << "Tip: Type 'Change Personality' to change the way Veebo responds to what you type. Type 'help' for more" << endl;
 		tips = "6";
 	}
 	else if (tips == "6") {
-		cout << "Tip: Want to have some fun? Type 'Infect me' for more info (non-harmful). Type 'help' for more" << endl;
+		cout << "Tip: Type 'Enable intro' to enable the logo on startup. Type 'help' for more" << endl;
 		tips = "7";
 	}
 	else if (tips == "7") {
-		cout << "Tip: Secure your account with a randomly generated Cryption Key by typing 'Enable secure mode'" << endl;
+		cout << "Tip: Want to have some fun? Type 'Infect me' for more info (non-harmful). Type 'help' for more" << endl;
 		tips = "8";
 	}
 	else if (tips == "8") {
-		cout << "Tip: Type 'Open website' to open a webpage. Type 'help' for more" << endl;
+		cout << "Tip: Secure your account with a randomly generated Cryption Key by typing 'Enable secure mode'" << endl;
 		tips = "9";
 	}
 	else if (tips == "9") {
-		cout << "Tip: Type 'Google' to search google for a website. Type 'help' for more" << endl;
+		cout << "Tip: Type 'Open website' to open a webpage. Type 'help' for more" << endl;
 		tips = "10";
 	}
 	else if (tips == "10") {
-		cout << "Tip: Type 'Update' to check if there is an update available. Type 'help' for more" << endl;
+		cout << "Tip: Type 'Google' to search google for a website. Type 'help' for more" << endl;
 		tips = "11";
 	}
 	else if (tips == "11") {
-		cout << "Tip: Type 'Whats new?' to find out whats new with each update. Type 'help' for more" << endl;
+		cout << "Tip: Type 'Update' to check if there is an update available. Type 'help' for more" << endl;
 		tips = "12";
 	}
 	else if (tips == "12") {
-		cout << "Tip: Type 'Stopwatch' to start a stopwatch. Type 'help' for more" << endl;
+		cout << "Tip: Type 'Whats new?' to find out whats new with each update. Type 'help' for more" << endl;
 		tips = "13";
 	}
 	else if (tips == "13") {
-		cout << "Tip: Type 'Change theme' to change color or 'rainbow' to go crazy. Type 'help' for more" << endl;
+		cout << "Tip: Type 'Stopwatch' to start a stopwatch. Type 'help' for more" << endl;
 		tips = "14";
 	}
 	else if (tips == "14") {
-		cout << "Tip: Type 'Show history' to show everything you have ever typed to Veebo" << endl;
+		cout << "Tip: Type 'Change theme' to change color or 'rainbow' to go crazy. Type 'help' for more" << endl;
 		tips = "15";
 	}
 	else if (tips == "15") {
-		cout << "Tip: Type 'Install beta profile' to participate in the beta software program. Type 'help' for more" << endl;
+		cout << "Tip: Type 'Show history' to show everything you have ever typed to Veebo" << endl;
 		tips = "16";
 	}
 	else if (tips == "16") {
+		cout << "Tip: Type 'Install beta profile' to participate in the beta software program. Type 'help' for more" << endl;
+		tips = "17";
+	}
+	else if (tips == "17") {
 		cout << "Tip: Type 'Report bug' if you found a software bug in Veebo. Type 'help' for more" << endl;
 		tips = "1";
 	}
