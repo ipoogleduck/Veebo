@@ -90,6 +90,51 @@ void tipss() {
 	writertips2 << tips;
 	writertips2.close();
 }
+void whatsnewinveebo() {
+	ifstream readerbeta6("BetaProfile.txt");
+	if (!readerbeta6) {
+		cout << "New in Veebo version " << cversion << ":" << endl;
+	}
+	else {
+		cout << "New in Veebo version " << betaversion << ":" << endl;
+	}
+	compOutput = "-Type 'Change Personality' to change the way Veebo responds to what you type"; //WHATS NEW FOR EACH UPDATE
+	cout << compOutput << endl;
+	cout << "-New Personality: Sassy Veebo. Does most things fine but likes to talk back" << endl;
+	cout << "-New Personality: Illiterate Veebo. Does not speak English, may mess up commands" << endl;
+	cout << "-Auto update for beta has been added. Veebo will check for a beta update if you have the beta profile installed" << endl;
+	/*
+	cout << "New in Veebo 1.0:" << endl;
+	compOutput = "-Last Major update until Veebo 1.0, which is almost here!"; //WHATS NEW FOR EACH UPDATE
+	cout << compOutput << endl;
+	cout << "-You can now type create account instead of just add user" << endl;
+	*/
+	compOutputLine2 = "";
+	compOutputLine3 = "";
+}
+void help() {
+	compOutput = "Here are some things you can ask me about:";
+	cout << compOutput << endl;
+	compOutputLine2 = " room::out--(not all items can fit on page)";
+	cout << "-Type 'Add user' to add an account" << endl;
+	cout << "-Type 'Log out' to log out of the current account info" << endl;
+	cout << "-Type 'Delete user' to delete a user" << endl;
+	cout << "-Type 'My info' to change the current account info" << endl;
+	cout << "-Type 'Change Personality' to change the way Veebo responds to what you type" << endl;
+	cout << "-Type 'Enable intro' to enable the logo on startup" << endl;
+	cout << "-Want to have some fun? Type 'Infect me' for more info (non-harmful)" << endl;
+	cout << "-Secure your account with a randomly generated Cryption Key by typing 'Enable secure mode'" << endl;
+	cout << "-Type 'Open website' to open a webpage" << endl;
+	cout << "-Type 'Google' to search google for a website" << endl;
+	cout << "-Type 'Update' to check if there is an update available" << endl;
+	cout << "-Type 'Whats new?' to find out whats new with each update" << endl;
+	cout << "-Type 'Stopwatch' to start a stopwatch" << endl;
+	cout << "-Type 'Change theme' to change color or 'rainbow' to go crazy" << endl;
+	cout << "-Type 'Show history' to show everything you have ever typed to Veebo" << endl;
+	cout << "-Type 'Install beta profile' to participate in the beta software program" << endl;
+	cout << "-Type 'Report bug' if you found a software bug in Veebo" << endl;
+	compOutputLine3 = "";
+}
 void startup() {
 	system("CLS");
 	cout << "Welcome to" << endl;

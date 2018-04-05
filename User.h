@@ -767,6 +767,15 @@ void switchUser() {
 	if (ruffruff != "iii") {
 		ruffruff = "iii";
 		name = "";
+		ifstream readerper32(currentP);
+		if (!readerper32) {
+		}
+		else {
+			personality = "";
+			readerper32.get(letter);
+			personality += letter;
+			readerper32.close();
+		}
 		ifstream reader2(currentY);
 		reader2.get(letter);
 		if (letter == 'Y') {
@@ -787,7 +796,15 @@ void switchUser() {
 			name.pop_back();
 			name.pop_back();
 			cout << name;
-			cout << ", welcome to Veebo! Say hi, or ask me a question!" << endl;
+			if (personality == "2") {
+				cout << ", you're a useless lump of flesh! Say hi, or ask me a question!" << endl;
+			}
+			else if (personality == "3") {
+				cout << ", I can't read! Say hi, or ask me a question!" << endl;
+			}
+			else {
+				cout << ", welcome to Veebo! Say hi, or ask me a question!" << endl;
+			}
 			cout << "You can also type 'help' for a list of cool features currently available" << endl;
 			ifstream readerbeta2("BetaProfile.txt");
 			if (!readerbeta2) {
@@ -809,16 +826,6 @@ void switchUser() {
 			account = "GUEST";
 		}
 		reader2.close();
-
-		ifstream readerper32(currentP);
-		if (!readerper32) {
-		}
-		else {
-			personality = "";
-			readerper32.get(letter);
-			personality += letter;
-			readerper32.close();
-		}
 		ifstream reader31(currentT);
 		if (!reader31) {
 			ofstream writer5444(currentT);
