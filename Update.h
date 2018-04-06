@@ -98,11 +98,11 @@ void whatsnewinveebo() {
 	else {
 		cout << "New in Veebo version " << betaversion << ":" << endl;
 	}
-	compOutput = "-Type 'Change Personality' to change the way Veebo responds to what you type"; //WHATS NEW FOR EACH UPDATE
+	compOutput = "-New Virtual Apps"; //WHATS NEW FOR EACH UPDATE
 	cout << compOutput << endl;
-	cout << "-New Personality: Sassy Veebo. Does most things fine but likes to talk back" << endl;
-	cout << "-New Personality: Illiterate Veebo. Does not speak English, may mess up commands" << endl;
-	cout << "-Auto update for beta has been added. Veebo will check for a beta update if you have the beta profile installed" << endl;
+	cout << "-Type 'Open Cryption' to open cryption directly inside Veebo" << endl;
+	//cout << "-New Personality: Illiterate Veebo. Does not speak English, may mess up commands" << endl;
+	//cout << "-Auto update for beta has been added. Veebo will check for a beta update if you have the beta profile installed" << endl;
 	/*
 	cout << "New in Veebo 1.0:" << endl;
 	compOutput = "-Last Major update until Veebo 1.0, which is almost here!"; //WHATS NEW FOR EACH UPDATE
