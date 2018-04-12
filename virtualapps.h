@@ -111,6 +111,7 @@ void decrypt() {
 }
 
 void startAsk() { //for the beginning question
+	decOrEnc = "";
 	cryptChar1 = 0;
 	cout << "\nType 'e' to encrypt a string of text, 'd' to decrypt one, and 'c' to return to Veebo" << endl;
 	getline(cin, decOrEnc);
@@ -191,21 +192,317 @@ void cryption() {
 		startAsk(); //yes goes back to encrypt
 
 	}
-	cout << "Type 'credits' for credits, otherwise click enter to return to Veebo" << endl;
-	getline(cin, decOrEnc);
-	while (decOrEnc == "credits") {
-		cout << "Service developed in Cpp and designed for Windows" << endl <<
-			"Code created by iPoogleDuck (Oliver)" << endl << "Original encryption key by Sleeperpad32" << endl <<
-			"Cryption 2.0 introduces a randomized cryption key to improve security" << endl;
-		getline(cin, decOrEnc);
-		decOrEnc = "";
-	}
-
 }
 
 
 
 //GIGGLES WORKSPACE
-void giggles() {
 
+string start;
+
+string loading;
+int loadingnumber = 1;
+char centplace = '^';
+string isgigglesopen;
+
+string howOften;
+string vFects;
+string outofloop;
+
+string openmass;
+int numberofopens;
+
+void giggles() {
+	//Checking if VirtualApp is installed
+	ifstream readerallofgiggles1("C:/Giggles/install.bat");
+	if (!readerallofgiggles1) {
+		ofstream writer21vapp("C:/Veebo/vappdown.txt");
+		if (!writer21vapp) {
+			cout << "Error opening file..." << endl;
+		}
+		else {
+			writer21vapp << "_" << endl;
+			writer21vapp.close();
+		}
+		cout << "Downloading";
+		CString str = "C:/Veebo/OTAnew/OpenSetupGiggles.vbs";
+		CString action = "open";
+		ShellExecute(NULL, action, str, NULL, NULL, SW_SHOW);
+		letter = '_';
+		updateabort = 0;
+		while (letter == '_' && updateabort < 50 || letter == ' ' && updateabort < 50) {
+			updateabort++;
+			tempString = "";
+			ifstream reader21vapp("C:/Veebo/vappdown.txt");
+			if (!reader21vapp) {
+			}
+			else {
+				reader21vapp.get(letter);
+				tempString += letter;
+				letter2++;
+			}
+			reader21vapp.close();
+			Sleep(500);
+			cout << ".";
+		}
+		//loop
+		cout << "\nInstalling";
+		letter = '_';
+		updateabort = 0;
+		installdone = "";
+		while (installdone != "G" && updateabort < 50) {
+			ifstream reader21vapp2("C:/Giggles/install.bat");
+			if (!reader21vapp2) {
+			}
+			else {
+				installdone = "G";
+			}
+			reader21vapp2.close();
+			Sleep(80);
+			cout << ".";
+			updateabort++;
+			tempString = "";
+		}
+		//loop
+		cout << endl;
+	}
+	readerallofgiggles1.close();
+
+	ifstream readerG("C:/Giggles/Giggles.exe");
+	if (!readerG) {
+		//If Giggles.exe is NotGiggles.exe
+		cout << "Activating Giggles..." << endl;
+		CString str = "C:/Veebo/OTAnew/OpenChangeToG.vbs";
+		CString action = "open";
+		ShellExecute(NULL, action, str, NULL, NULL, SW_SHOW);
+		Sleep(2000);
+	}
+	system("CLS");
+	//Check if giggles is already open, if not it will open it
+	centplace = '^';
+	loadingnumber = 1;
+	start = "";
+	ofstream isgigglesopenwriter("C:/Giggles/isgigglesopen.txt");
+	if (!isgigglesopenwriter) {
+		cout << "Error opening file..." << endl;
+	}
+	else {
+		isgigglesopenwriter << "  ";
+		isgigglesopenwriter.close();
+	}
+	loading = "{----------------------------}";
+	for (int n = 0; n < 29; n++) {
+		cout << "Checking if Giggles is opened" << endl;
+		cout << loading;
+		loading[loadingnumber] = centplace;
+		loadingnumber++;
+		Sleep(50);
+		system("CLS");
+	}
+	ifstream isgigglesopenreader("C:/Giggles/isgigglesopen.txt");
+	if (!isgigglesopenreader) {
+	}
+	else {
+		isgigglesopen = "";
+		for (int i = 0; !isgigglesopenreader.eof(); i++) {
+			isgigglesopenreader.get(letter);
+			isgigglesopen += letter;
+		}
+		isgigglesopenreader.close();
+		isgigglesopen.pop_back();
+	}
+	if (isgigglesopen == "  ") {
+		CString str = "C:/Giggles/GigglesStart.vbs";
+		CString action = "open";
+		ShellExecute(NULL, action, str, NULL, NULL, SW_SHOW);
+		cout << "Giggles has been opened in the background" << endl;
+	}
+	else if (isgigglesopen == "Yes") {
+		cout << "Giggles is already opened in the background" << endl;
+	}
+
+	cout << "Hi, welcome to Giggles Settings Virtual Edition" << endl;
+	cout << "Type 'start' to start Giggles, 'stop' to stop it, or 'settings' to adjust the settings" << endl;
+	cout << "Type 'deactivate' to deactivate opening giggles on startup" << endl;
+	cout << "You can return to Veebo by typing 'exit'" << endl << endl;
+	while (start != "exit" && start != "Exit") {
+		getline(cin, start);
+		if (start == "start" || start == "Start") {
+			ofstream isgigglesopenwriter4("C:/Giggles/isgigglesopen.txt");
+			if (!isgigglesopenwriter4) {
+				cout << "Error opening file..." << endl;
+			}
+			else {
+				isgigglesopenwriter4 << "  ";
+				isgigglesopenwriter4.close();
+			}
+			cout << "Checking if Giggles is opened" << endl;
+			for (int n = 0; n < 29; n++) {
+				cout << ".";
+				Sleep(60);
+			}
+			ifstream isgigglesopenreader3("C:/Giggles/isgigglesopen.txt");
+			if (!isgigglesopenreader3) {
+				cout << "Error" << endl;
+			}
+			else {
+				isgigglesopen = "";
+				for (int i = 0; !isgigglesopenreader3.eof(); i++) {
+					isgigglesopenreader3.get(letter);
+					isgigglesopen += letter;
+				}
+				isgigglesopenreader3.close();
+				isgigglesopen.pop_back();
+			}
+			if (isgigglesopen == "  ") {
+				CString str = "C:/Giggles/GigglesStart.vbs";
+				CString action = "open";
+				ShellExecute(NULL, action, str, NULL, NULL, SW_SHOW);
+				cout << "\nGiggles has been opened in the background" << endl;
+			}
+			else if (isgigglesopen == "Yes") {
+				outofloop = "";
+				cout << "\nGiggles is already opened in the background" << endl;
+				while (outofloop != "Yes") {
+					cout << "You can choose to mass open Giggles windows. Would you like to continue?" << endl;
+					getline(cin, openmass);
+					if (openmass == "Yes" || openmass == "yes" || openmass == "Sure") {
+						cout << "How many Giggles windows would yould you like to open?" << endl;
+						cout << "You can choose a number between 1 and 1000" << endl;
+						cin >> numberofopens;
+						cin.ignore();
+						if (numberofopens > 0 && numberofopens < 101) {
+							cout << "Opening..." << endl;
+							for (int n = 0; n < numberofopens; n++) {
+								CString str = "C:/Giggles/GigglesStart.vbs";
+								CString action = "open";
+								ShellExecute(NULL, action, str, NULL, NULL, SW_SHOW);
+							}
+							outofloop = "Yes";
+							cout << "Files have been opened in background" << endl;
+						}
+						else if (numberofopens > 100 && numberofopens < 10001) {
+							cout << "Anything over 100 is not recommended. Do you want to continue?" << endl;
+							getline(cin, openmass);
+							if (openmass == "Yes" || openmass == "yes" || openmass == "Sure") {
+								cout << "Opening..." << endl;
+								for (int n = 0; n < numberofopens; n++) {
+									CString str = "C:/Giggles/GigglesStart.vbs";
+									CString action = "open";
+									ShellExecute(NULL, action, str, NULL, NULL, SW_SHOW);
+								}
+								outofloop = "Yes";
+								cout << "Files have been opened in background" << endl;
+							}
+							else {
+								cout << "Okay, you can choose another number if you want" << endl;
+							}
+						}
+						else {
+							cout << "Invalid option" << endl;
+							outofloop = "";
+						}
+					}
+					else if (openmass == "No" || openmass == "no" || openmass == "Nah" || openmass == "nah") {
+						outofloop = "Yes";
+						cout << "Okay" << endl;
+					}
+					else {
+						cout << "Try again and select a valid option (Yes/No)" << endl;
+					}
+				}
+			}
+			else {
+				cout << "Error" << endl;
+			}
+		}
+		if (start == "Deactivate" || start == "deactivate") {
+			ofstream closegiggleswriter("C:/Giggles/closegiggles.txt");
+			if (!closegiggleswriter) {
+				cout << "Error opening file..." << endl;
+			}
+			else {
+				closegiggleswriter << "Close";
+				closegiggleswriter.close();
+			}
+			cout << "Deactivating and closing giggles... If you open Giggles from Veebo again it will automatically reactivate" << endl;
+			Sleep(3000);
+			CString str = "C:/Veebo/OTAnew/OpenChangeToNG.vbs";
+			CString action = "open";
+			ShellExecute(NULL, action, str, NULL, NULL, SW_SHOW);
+			start = "exit";
+		}
+		else if (start == "stop" || start == "Stop") {
+			ofstream closegiggleswriter("C:/Giggles/closegiggles.txt");
+			if (!closegiggleswriter) {
+				cout << "Error opening file..." << endl;
+			}
+			else {
+				closegiggleswriter << "Close";
+				closegiggleswriter.close();
+			}
+
+			cout << "Success, Giggles is closed" << endl;
+		}
+		else if (start == "update" || start == "Update") {
+			cout << "Updating is not currently available via Giggles Virtual Edition" << endl;
+		}
+		else if (start == "Settings" || start == "settings") {
+			outofloop = "";
+			while (outofloop != "Yes") {
+				cout << "How frequent do you want giggles to occur?" << endl;
+				cout << "1. Very Often [Once every 33 seconds]" << endl;
+				cout << "2. Often [Once every 5.5 minutes]" << endl;
+				cout << "3. Every once in a while (default) [Once every 55 minutes]" << endl;
+				cout << "4. Pretty rare [Once every 9.2 hours]" << endl;
+				cout << "5. Very rare (Almost never) [Once every 4 days]" << endl;
+				getline(cin, howOften);
+				if (howOften == "1" || howOften == "2" || howOften == "3" || howOften == "4" || howOften == "5") {
+					ofstream howOftenwriter("C:/Giggles/howoften.txt");
+					if (!howOftenwriter) {
+						cout << "Error opening file..." << endl;
+					}
+					else {
+						howOftenwriter << howOften;
+					}
+					howOftenwriter.close();
+					outofloop = "Yes";
+				}
+				else {
+					cout << "Try again and select a valid option" << endl;
+				}
+			}
+			outofloop = "";
+			while (outofloop != "Yes") {
+				cout << "Do you want to enable visual effects? (Default no)" << endl;
+				getline(cin, vFects);
+				if (vFects == "Yes" || vFects == "yes" || vFects == "Sure") {
+					vFects = "Yes";
+					outofloop = "Yes";
+				}
+				else if (vFects == "No" || vFects == "no" || vFects == "Nah" || vFects == "nah") {
+					vFects = "No";
+					outofloop = "Yes";
+				}
+				else {
+					cout << "Try again and select a valid option (Yes/No)" << endl;
+				}
+			}
+			ofstream vfxwriter("C:/Giggles/vfx.txt");
+			if (!vfxwriter) {
+				cout << "Error opening file..." << endl;
+			}
+			else {
+				vfxwriter << vFects;
+			}
+			vfxwriter.close();
+			cout << "Settings have been saved and taken effect" << endl;
+		}
+		else if (start == "exit" || start == "Exit") {
+		
+		}
+		else {
+			cout << "Try again and select a valid option from above" << endl;
+		}
+	}
 }

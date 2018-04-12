@@ -101,7 +101,7 @@ void whatsnewinveebo() {
 	compOutput = "-New Virtual Apps"; //WHATS NEW FOR EACH UPDATE
 	cout << compOutput << endl;
 	cout << "-Type 'Open Cryption' to open cryption directly inside Veebo" << endl;
-	//cout << "-New Personality: Illiterate Veebo. Does not speak English, may mess up commands" << endl;
+	cout << "-Type 'Open Giggles' to open Giggles Settings directly inside Veebo" << endl;
 	//cout << "-Auto update for beta has been added. Veebo will check for a beta update if you have the beta profile installed" << endl;
 	/*
 	cout << "New in Veebo 1.0:" << endl;
