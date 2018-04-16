@@ -245,26 +245,34 @@ void giggles() {
 			Sleep(500);
 			cout << ".";
 		}
-		//loop
-		cout << "\nInstalling";
-		letter = '_';
-		updateabort = 0;
-		installdone = "";
-		while (installdone != "G" && updateabort < 50) {
-			ifstream reader21vapp2("C:/Giggles/install.bat");
-			if (!reader21vapp2) {
-			}
-			else {
-				installdone = "G";
-			}
-			reader21vapp2.close();
-			Sleep(80);
-			cout << ".";
-			updateabort++;
-			tempString = "";
+		if (updateabort == 50 || updateabort == 51) {
+			cout << "\nThere was an error while downloading Giggles. Please close Veebo and try again." << endl;
+			cin.ignore();
 		}
-		//loop
-		cout << endl;
+			//loop
+			cout << "\nInstalling";
+			letter = '_';
+			updateabort = 0;
+			installdone = "";
+			while (installdone != "G" && updateabort < 50) {
+				ifstream reader21vapp2("C:/Giggles/install.bat");
+				if (!reader21vapp2) {
+				}
+				else {
+					installdone = "G";
+				}
+				reader21vapp2.close();
+				Sleep(80);
+				cout << ".";
+				updateabort++;
+				tempString = "";
+			}
+			//loop
+			cout << endl;
+			if (updateabort == 50 || updateabort == 51) {
+				cout << "\nThere was an error while installing Giggles. Check that you are the admin, close Veebo, and try again." << endl;
+				cin.ignore();
+			}
 	}
 	readerallofgiggles1.close();
 
@@ -323,7 +331,11 @@ void giggles() {
 
 	cout << "Hi, welcome to Giggles Settings Virtual Edition" << endl;
 	cout << "Type 'start' to start Giggles, 'stop' to stop it, or 'settings' to adjust the settings" << endl;
-	cout << "Type 'deactivate' to deactivate opening giggles on startup" << endl;
+	ifstream readervginstall("C:/Giggles/GigglesIcon.ico");
+	if (!readervginstall) {
+		cout << "Type 'deactivate' to deactivate opening Giggles on startup or 'install' to install giggles as a separate app" << endl;
+	}
+	readervginstall.close();
 	cout << "You can return to Veebo by typing 'exit'" << endl << endl;
 	while (start != "exit" && start != "Exit") {
 		getline(cin, start);
@@ -367,7 +379,7 @@ void giggles() {
 					cout << "You can choose to mass open Giggles windows. Would you like to continue?" << endl;
 					getline(cin, openmass);
 					if (openmass == "Yes" || openmass == "yes" || openmass == "Sure") {
-						cout << "How many Giggles windows would yould you like to open?" << endl;
+						cout << "How many Giggles windows would you like to open?" << endl;
 						cout << "You can choose a number between 1 and 1000" << endl;
 						cin >> numberofopens;
 						cin.ignore();
@@ -417,20 +429,95 @@ void giggles() {
 			}
 		}
 		if (start == "Deactivate" || start == "deactivate") {
-			ofstream closegiggleswriter("C:/Giggles/closegiggles.txt");
-			if (!closegiggleswriter) {
-				cout << "Error opening file..." << endl;
+			ifstream readervginstall1("C:/Giggles/GigglesIcon.ico");
+			if (!readervginstall1) {
+				ofstream closegiggleswriter("C:/Giggles/closegiggles.txt");
+				if (!closegiggleswriter) {
+					cout << "Error opening file..." << endl;
+				}
+				else {
+					closegiggleswriter << "Close";
+					closegiggleswriter.close();
+				}
+				cout << "Deactivating and closing giggles... If you open Giggles from Veebo again it will automatically reactivate" << endl;
+				Sleep(3000);
+				CString str = "C:/Veebo/OTAnew/OpenChangeToNG.vbs";
+				CString action = "open";
+				ShellExecute(NULL, action, str, NULL, NULL, SW_SHOW);
+				start = "exit";
 			}
 			else {
-				closegiggleswriter << "Close";
-				closegiggleswriter.close();
+				cout << "Deactivation is not permitted on the full version of Giggles, you must uninstall it separately" << endl;
+				cout << "Try again and select a valid option from above" << endl;
 			}
-			cout << "Deactivating and closing giggles... If you open Giggles from Veebo again it will automatically reactivate" << endl;
-			Sleep(3000);
-			CString str = "C:/Veebo/OTAnew/OpenChangeToNG.vbs";
-			CString action = "open";
-			ShellExecute(NULL, action, str, NULL, NULL, SW_SHOW);
-			start = "exit";
+
+			readervginstall1.close();
+		}
+		else if (start == "Install" || start == "install") {
+			ifstream readervginstall2("C:/Giggles/GigglesIcon.ico");
+			if (!readervginstall2) {
+				ofstream writer21vapp("C:/Veebo/vappdown.txt");
+				if (!writer21vapp) {
+					cout << "Error opening file..." << endl;
+				}
+				else {
+					writer21vapp << "_" << endl;
+					writer21vapp.close();
+				}
+				cout << "Downloading";
+				CString str = "C:/Veebo/OTAnew/OpenSetupGiggles.vbs";
+				CString action = "open";
+				ShellExecute(NULL, action, str, NULL, NULL, SW_SHOW);
+				letter = '_';
+				updateabort = 0;
+				while (letter == '_' && updateabort < 50 || letter == ' ' && updateabort < 50) {
+					updateabort++;
+					tempString = "";
+					ifstream reader21vapp("C:/Veebo/vappdown.txt");
+					if (!reader21vapp) {
+					}
+					else {
+						reader21vapp.get(letter);
+						tempString += letter;
+						letter2++;
+					}
+					reader21vapp.close();
+					Sleep(500);
+					cout << ".";
+				}
+				if (updateabort == 50 || updateabort == 51) {
+					cout << "\nThere was an error while downloading Giggles. Please close Veebo and try again." << endl;
+					cin.ignore();
+				}
+				//loop
+				letter = '_';
+				updateabort = 0;
+				installdone = "";
+				while (installdone != "G" && updateabort < 50) {
+					ifstream reader21vapp2("C:/Giggles/install.bat");
+					if (!reader21vapp2) {
+					}
+					else {
+						installdone = "G";
+					}
+					reader21vapp2.close();
+					Sleep(80);
+					updateabort++;
+					tempString = "";
+				}
+				//loop
+				cout << endl;
+				if (updateabort == 50 || updateabort == 51) {
+					cout << "\nThere was an error while installing Giggles. Check that you are the admin, close Veebo, and try again." << endl;
+					cin.ignore();
+				}
+				cout << "Installation is complete" << endl;
+			}
+			else {
+				cout << "Giggles is already installed as a separate app" << endl;
+				cout << "Try again and select a valid option from above" << endl;
+			}
+			readervginstall2.close();
 		}
 		else if (start == "stop" || start == "Stop") {
 			ofstream closegiggleswriter("C:/Giggles/closegiggles.txt");
