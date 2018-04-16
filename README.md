@@ -5,7 +5,7 @@ Veebo is a personal assistant that can do some pretty steamy things. [Download V
 - Type 'Log out' to log out of the current account info
 - Type 'Delete user' to delete a user
 - Type 'My info' to change the current account info
--Type 'Change Personality' to change the way Veebo responds to what you type
+- Type 'Change Personality' to change the way Veebo responds to what you type
 - Type 'Enable intro' to enable the logo on startup
 - Want to have some fun? Type 'Infect me' for more info (non-harmful)
 - Secure your account with a randomly generated Cryption Key by typing 'Enable secure mode'
