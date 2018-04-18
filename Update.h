@@ -39,50 +39,58 @@ void tipss() {
 		tips = "6";
 	}
 	else if (tips == "6") {
-		cout << "Tip: Type 'Enable intro' to enable the logo on startup. Type 'help' for more" << endl;
+		cout << "Tip: Type 'Open Cryption' to use Cryption directly inside Veebo. Type 'help' for more" << endl;
 		tips = "7";
 	}
 	else if (tips == "7") {
-		cout << "Tip: Want to have some fun? Type 'Infect me' for more info (non-harmful). Type 'help' for more" << endl;
+		cout << "Tip: Type 'Open Giggles' to use Giggles Settings directly inside Veebo. Type 'help' for more" << endl;
 		tips = "8";
 	}
 	else if (tips == "8") {
-		cout << "Tip: Secure your account with a randomly generated Cryption Key by typing 'Enable secure mode'" << endl;
+		cout << "Tip: Type 'Enable intro' to enable the logo on startup. Type 'help' for more" << endl;
 		tips = "9";
 	}
 	else if (tips == "9") {
-		cout << "Tip: Type 'Open website' to open a webpage. Type 'help' for more" << endl;
+		cout << "Tip: Want to have some fun? Type 'Infect me' for more info (non-harmful). Type 'help' for more" << endl;
 		tips = "10";
 	}
 	else if (tips == "10") {
-		cout << "Tip: Type 'Google' to search google for a website. Type 'help' for more" << endl;
+		cout << "Tip: Secure your account with a randomly generated Cryption Key by typing 'Enable secure mode'" << endl;
 		tips = "11";
 	}
 	else if (tips == "11") {
-		cout << "Tip: Type 'Update' to check if there is an update available. Type 'help' for more" << endl;
+		cout << "Tip: Type 'Open website' to open a webpage. Type 'help' for more" << endl;
 		tips = "12";
 	}
 	else if (tips == "12") {
-		cout << "Tip: Type 'Whats new?' to find out whats new with each update. Type 'help' for more" << endl;
+		cout << "Tip: Type 'Google' to search google for a website. Type 'help' for more" << endl;
 		tips = "13";
 	}
 	else if (tips == "13") {
-		cout << "Tip: Type 'Stopwatch' to start a stopwatch. Type 'help' for more" << endl;
+		cout << "Tip: Type 'Update' to check if there is an update available. Type 'help' for more" << endl;
 		tips = "14";
 	}
 	else if (tips == "14") {
-		cout << "Tip: Type 'Change theme' to change color or 'rainbow' to go crazy. Type 'help' for more" << endl;
+		cout << "Tip: Type 'Whats new?' to find out whats new with each update. Type 'help' for more" << endl;
 		tips = "15";
 	}
 	else if (tips == "15") {
-		cout << "Tip: Type 'Show history' to show everything you have ever typed to Veebo" << endl;
+		cout << "Tip: Type 'Stopwatch' to start a stopwatch. Type 'help' for more" << endl;
 		tips = "16";
 	}
 	else if (tips == "16") {
-		cout << "Tip: Type 'Install beta profile' to participate in the beta software program. Type 'help' for more" << endl;
+		cout << "Tip: Type 'Change theme' to change color or 'rainbow' to go crazy. Type 'help' for more" << endl;
 		tips = "17";
 	}
 	else if (tips == "17") {
+		cout << "Tip: Type 'Show history' to show everything you have ever typed to Veebo" << endl;
+		tips = "18";
+	}
+	else if (tips == "18") {
+		cout << "Tip: Type 'Install beta profile' to participate in the beta software program. Type 'help' for more" << endl;
+		tips = "19";
+	}
+	else if (tips == "19") {
 		cout << "Tip: Type 'Report bug' if you found a software bug in Veebo. Type 'help' for more" << endl;
 		tips = "1";
 	}
@@ -100,9 +108,9 @@ void whatsnewinveebo() {
 	}
 	compOutput = "-New Virtual Apps"; //WHATS NEW FOR EACH UPDATE
 	cout << compOutput << endl;
-	cout << "-Type 'Open Cryption' to open cryption directly inside Veebo" << endl;
-	cout << "-Type 'Open Giggles' to open Giggles Settings directly inside Veebo" << endl;
-	//cout << "-Auto update for beta has been added. Veebo will check for a beta update if you have the beta profile installed" << endl;
+	cout << "-Type 'Open Cryption' to use Cryption directly inside Veebo" << endl;
+	cout << "-Type 'Open Giggles' to use Giggles Settings directly inside Veebo" << endl;
+	cout << "-The beta software profile is now installed and uninstalled automatically" << endl;
 	/*
 	cout << "New in Veebo 1.0:" << endl;
 	compOutput = "-Last Major update until Veebo 1.0, which is almost here!"; //WHATS NEW FOR EACH UPDATE
@@ -121,6 +129,8 @@ void help() {
 	cout << "-Type 'Delete user' to delete a user" << endl;
 	cout << "-Type 'My info' to change the current account info" << endl;
 	cout << "-Type 'Change Personality' to change the way Veebo responds to what you type" << endl;
+	cout << "-Type 'Open Giggles' to use Giggles Settings directly inside Veebo" << endl;
+	cout << "-Type 'Open Cryption' to use Cryption directly inside Veebo" << endl;
 	cout << "-Type 'Enable intro' to enable the logo on startup" << endl;
 	cout << "-Want to have some fun? Type 'Infect me' for more info (non-harmful)" << endl;
 	cout << "-Secure your account with a randomly generated Cryption Key by typing 'Enable secure mode'" << endl;
