@@ -7,7 +7,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Veebo", "Veebo.vcxproj", "{
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Veebo Beta Software", "..\Veebo Beta Software\Veebo Beta Software.vdproj", "{F162E2CC-5727-4669-9EF0-BB5EBA66D9D8}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Veebo Setup", "..\Veebo Setup\Veebo Setup.vdproj", "{2D9BBB04-C5F8-4A53-A8B3-17219FA50B59}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Veebo Setup", "..\Veebo Setup\Veebo Setup.vdproj", "{F9CC202E-6BFF-4209-9EA6-2D457B7B991B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,14 +30,14 @@ Global
 		{F162E2CC-5727-4669-9EF0-BB5EBA66D9D8}.Release|x64.ActiveCfg = Release
 		{F162E2CC-5727-4669-9EF0-BB5EBA66D9D8}.Release|x86.ActiveCfg = Release
 		{F162E2CC-5727-4669-9EF0-BB5EBA66D9D8}.Release|x86.Build.0 = Release
-		{2D9BBB04-C5F8-4A53-A8B3-17219FA50B59}.Debug|x64.ActiveCfg = Debug
-		{2D9BBB04-C5F8-4A53-A8B3-17219FA50B59}.Debug|x64.Build.0 = Debug
-		{2D9BBB04-C5F8-4A53-A8B3-17219FA50B59}.Debug|x86.ActiveCfg = Debug
-		{2D9BBB04-C5F8-4A53-A8B3-17219FA50B59}.Debug|x86.Build.0 = Debug
-		{2D9BBB04-C5F8-4A53-A8B3-17219FA50B59}.Release|x64.ActiveCfg = Release
-		{2D9BBB04-C5F8-4A53-A8B3-17219FA50B59}.Release|x64.Build.0 = Release
-		{2D9BBB04-C5F8-4A53-A8B3-17219FA50B59}.Release|x86.ActiveCfg = Release
-		{2D9BBB04-C5F8-4A53-A8B3-17219FA50B59}.Release|x86.Build.0 = Release
+		{F9CC202E-6BFF-4209-9EA6-2D457B7B991B}.Debug|x64.ActiveCfg = Debug
+		{F9CC202E-6BFF-4209-9EA6-2D457B7B991B}.Debug|x64.Build.0 = Debug
+		{F9CC202E-6BFF-4209-9EA6-2D457B7B991B}.Debug|x86.ActiveCfg = Debug
+		{F9CC202E-6BFF-4209-9EA6-2D457B7B991B}.Debug|x86.Build.0 = Debug
+		{F9CC202E-6BFF-4209-9EA6-2D457B7B991B}.Release|x64.ActiveCfg = Release
+		{F9CC202E-6BFF-4209-9EA6-2D457B7B991B}.Release|x64.Build.0 = Release
+		{F9CC202E-6BFF-4209-9EA6-2D457B7B991B}.Release|x86.ActiveCfg = Release
+		{F9CC202E-6BFF-4209-9EA6-2D457B7B991B}.Release|x86.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

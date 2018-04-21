@@ -283,8 +283,9 @@ void giggles() {
 		CString str = "C:/Veebo/OTAnew/OpenChangeToG.vbs";
 		CString action = "open";
 		ShellExecute(NULL, action, str, NULL, NULL, SW_SHOW);
-		Sleep(2000);
+		Sleep(1500);
 	}
+	readerG.close();
 	system("CLS");
 	//Check if giggles is already open, if not it will open it
 	centplace = '^';
@@ -428,7 +429,7 @@ void giggles() {
 				cout << "Error" << endl;
 			}
 		}
-		if (start == "Deactivate" || start == "deactivate") {
+		else if (start == "Deactivate" || start == "deactivate") {
 			ifstream readervginstall1("C:/Giggles/GigglesIcon.ico");
 			if (!readervginstall1) {
 				ofstream closegiggleswriter("C:/Giggles/closegiggles.txt");
@@ -493,24 +494,22 @@ void giggles() {
 				letter = '_';
 				updateabort = 0;
 				installdone = "";
-				while (installdone != "G" && updateabort < 50) {
-					ifstream reader21vapp2("C:/Giggles/install.bat");
+				cout << "\nWaiting for user interaction..." << endl;
+				CString str1 = "C:/Veebo/giggles_setup.msi";
+				CString action1 = "open";
+				ShellExecute(NULL, action1, str1, NULL, NULL, SW_SHOW);
+				while (installdone != "G") {
+					ifstream reader21vapp2("C:/Giggles/GigglesIcon.ico");
 					if (!reader21vapp2) {
 					}
 					else {
 						installdone = "G";
 					}
 					reader21vapp2.close();
-					Sleep(80);
-					updateabort++;
+					Sleep(500);
 					tempString = "";
 				}
 				//loop
-				cout << endl;
-				if (updateabort == 50 || updateabort == 51) {
-					cout << "\nThere was an error while installing Giggles. Check that you are the admin, close Veebo, and try again." << endl;
-					cin.ignore();
-				}
 				cout << "Installation is complete" << endl;
 			}
 			else {
@@ -532,7 +531,7 @@ void giggles() {
 			cout << "Success, Giggles is closed" << endl;
 		}
 		else if (start == "update" || start == "Update") {
-			cout << "Updating is not currently available via Giggles Virtual Edition" << endl;
+			cout << "Updating is not available via Giggles Virtual Edition" << endl << "Install the full version of the app and open the shortcut on your desktop" << endl;
 		}
 		else if (start == "Settings" || start == "settings") {
 			outofloop = "";
